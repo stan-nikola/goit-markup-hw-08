@@ -1,0 +1,48 @@
+.client{
+    @extend %section;
+}
+.container{
+    @extend %container;
+}
+.client__title{
+    @extend %title-h2;
+}
+.client__list {
+    @extend %list;
+    display: flex;
+}
+
+.client__item {
+    display: flex;
+    margin-right: 30px;
+}
+
+.client__item {
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.client__link {
+    @extend %link;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid $primary-icon-fill;
+    border-radius: 4px;
+    color: $primary-icon-fill;
+    transition: border-color 250ms $transition-timing-function,
+        color 250ms $transition-timing-function;
+
+    &:hover,
+    &:focus {
+        border-color: $accent-color;
+        color: $accent-color;
+    }
+}
+
+.client__icon {
+    fill: currentColor;
+}

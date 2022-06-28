@@ -1,0 +1,45 @@
+.work {
+    padding-top: 0;
+    @extend %section;
+}
+
+.container {
+    @extend %container;
+}
+
+.work__title {
+    @extend %title-h2;
+}
+
+.work__list {
+    display: flex;
+    @extend %list;
+}
+
+.work__item {
+    position: relative;
+    width: calc((100%-#{$work-total-indent}) / $work-item);
+    margin-right: 30px;
+
+}
+
+.work__item:last-child {
+    margin-right: 0;
+}
+
+.overlay__work {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: $overlay-work-height-flexible;
+    background: $work-box-bg;
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $second-text-color;
+}

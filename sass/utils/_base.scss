@@ -1,0 +1,26 @@
+body {
+    font-family: $main-font;
+    color: $primary-text-color;
+    letter-spacing: 0.03em;
+    background-color: $primary-bgr-color;
+    font-size: $primary-font-size;
+}
+
+ul,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+address {
+    font-style: normal;
+}
+

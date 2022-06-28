@@ -1,0 +1,205 @@
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 528px;
+    height: 581px;
+    padding: 40px 39px 40px 41px;
+
+    background: $primary-bgr-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: transform 250ms $transition-timing-function;
+}
+
+.modal__btn--close {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 0;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: color 250ms $transition-timing-function;
+    fill: currentColor;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+.modal__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.modal__form {
+    display: flex;
+    flex-direction: column;
+
+    & :nth-child(4) {
+        margin-bottom: 17px;
+    }
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.label__text {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: $third-text-color;
+    margin-bottom: 4px;
+}
+
+.label__thumb {
+    position: relative;
+
+    &:hover .label__imput,
+    &:focus-within .label__imput {
+        border-color: $accent-color;
+    }
+
+    &:hover .label__icon,
+    &:focus-within .label__icon {
+        fill: $accent-color;
+    }
+}
+
+.label__imput {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 12px 16px 12px 42px;
+    outline: none;
+    transition: border-color 250ms $transition-timing-function;
+}
+
+.label__icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    width: 18px;
+    height: 18px;
+    transform: translateY(-50%);
+    transition: fill 250ms $transition-timing-function;
+}
+
+.label__imput--textarea {
+    height: 120px;
+    padding: 12px 16px;
+    resize: none;
+
+    &:focus .label__placeholder,
+    &:not(:placeholder-shown)+.label__placeholder {
+        opacity: 0;
+    }
+}
+
+.label__placeholder {
+    position: absolute;
+    top: 13px;
+    left: 16px;
+
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+    /* transition: opacity 250ms var(--transition-timing-function); */
+}
+
+
+
+.checkbox {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.checkbox__browser {
+    @extend %visually-hidden;
+
+    &:hover+.checkbox__costom,
+    &:focus+.checkbox__costom {
+        border-color: $accent-color;
+    }
+
+    &:checked+.checkbox__costom {
+        background-color: $accent-color;
+        border-color: $accent-color;
+        background-image: url(../images/svg/icon-check.svg);
+        background-size: contain;
+        background-origin: border-box;
+    }
+}
+
+.checkbox__costom {
+    width: 16px;
+    height: 15px;
+    border: 2px solid;
+    border-color: $primary-text-color;
+    border-radius: 2px;
+    margin-right: 7px;
+    transition: background-color 250ms $transition-timing-function,
+        background-image 250ms $transition-timing-function,
+        border-color 250ms $transition-timing-function;
+
+}
+
+.checkbox__text {
+    line-height: 1.71;
+    color: $third-text-color;
+}
+
+.checkbox__link {
+    @extend %link;
+
+    position: relative;
+    color: $accent-color;
+}
+
+.checkbox__link::after {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.7px;
+    background-color: $accent-color;
+}
+
+.modal__btn--submit {
+    @extend %button;
+    width: 200px;
+    height: 50px;
+    background-color: $accent-color;
+    font-weight: 700;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: $second-text-color;
+    padding: 10px 56px;
+    margin: 0 auto;
+    transition: box-shadow 250ms $transition-timing-function;
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+}

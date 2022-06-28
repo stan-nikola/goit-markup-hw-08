@@ -1,0 +1,123 @@
+.footer {
+    background-color: $secondary-bgr-color;
+    padding: 60px 0;
+}
+.footer__title{
+    @extend %visually-hidden;
+}
+.footer__item {
+    @extend %container;
+    display: flex;
+    align-items: baseline;
+}
+
+.footer-contacts {
+    margin-right: 70px;
+}
+
+.footer-contacts__list {
+    @extend %list;
+}
+
+.footer-contacts__item{
+    &:not(:last-child) {
+            margin-bottom: 9px;
+        }
+}
+
+.footer-contacts__link {
+    @extend %link;
+    line-height: 1.71;
+    color: $footer-text-color;
+    display: block;
+    transition: color 250ms $transition-timing-function;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+.footer-contacts__link--building {
+    color: $second-text-color;
+}
+
+.footer__subtitle {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $second-text-color;
+    margin-bottom: 20px;
+}
+
+.footer-subscribe {
+    margin-left: auto;
+}
+
+.footer-subscribe__form {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    &:focus .footer-subscribe__placeholder,
+    &:not(:placeholder-shown)+.footer-subscribe__placeholder {
+        opacity: 0;
+    }
+}
+
+.footer-subscribe__field {
+    width: 358px;
+    height: 50px;
+    background-color: inherit;
+    color: $second-text-color;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    padding: 15px 16px;
+    outline: none;
+    transition: border-color 250ms $transition-timing-function;
+
+    &:hover,
+    &:focus {
+        border-color: $accent-color;
+    }
+
+    &:not(:placeholder-shown)+.footer-subscribe__placeholder {
+        opacity: 0;
+    }
+}
+
+.footer-subscribe__placeholder {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+
+    font-size: 16px;
+    line-height: 1.25;
+    color: $footer-text-color;
+    /* transition: opacity 250ms $transition-timing-function); */
+}
+
+.footer-subscribe-btn {
+    @extend %button;
+    display: flex;
+    align-items: center;
+    padding: 0 28px;
+    background-color: $accent-color;
+    color: $second-text-color;
+    margin-left: 12px;
+    font-weight: 700;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    transition: box-shadow 250ms $transition-timing-function;
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.footer-subscribe-btn__text {
+    margin-right: 10px;
+}
