@@ -32,9 +32,8 @@
     right: 0;
     bottom: 0;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include centered-flex();
+
     width: 100%;
     height: $overlay-work-height-flexible;
     background: $work-box-bg;

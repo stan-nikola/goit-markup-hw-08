@@ -22,9 +22,8 @@
 }
 
 .feature__box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include centered-flex();
+
     width: 270px;
     height: 120px;
     background-color: $third-bgr-color;

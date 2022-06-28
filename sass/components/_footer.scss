@@ -27,6 +27,7 @@
 
 .footer-contacts__link {
     @extend %link;
+    
     line-height: 1.71;
     color: $footer-text-color;
     display: block;
@@ -100,8 +101,8 @@
 }
 .footer-subscribe-btn {
     @extend %button;
-    display: flex;
-    align-items: center;
+    @include centered-flex ($type:inline-flex);
+    
     padding: 0 28px;
     background-color: $accent-color;
     color: $second-text-color;

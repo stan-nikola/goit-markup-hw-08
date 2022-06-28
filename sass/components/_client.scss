@@ -24,10 +24,8 @@
 }
 .client__link {
     @extend %link;
+    @include centered-flex ();
     
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 170px;
     height: 92px;
     border: 1px solid $primary-icon-fill;

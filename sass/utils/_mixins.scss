@@ -1,0 +1,6 @@
+@mixin centered-flex ($type: flex){
+    display: $type;
+    align-items: center;
+    justify-content: center;
+    
+}

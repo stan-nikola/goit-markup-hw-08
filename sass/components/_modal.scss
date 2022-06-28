@@ -21,9 +21,7 @@
 
 .modal__btn--close {
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include centered-flex();
     top: 8px;
     right: 8px;
     width: 30px;
@@ -130,7 +128,7 @@
 
 
 .checkbox {
-    display: flex;
+    display: inline-flex;
     align-items: center;
 
     margin-bottom: 30px;
