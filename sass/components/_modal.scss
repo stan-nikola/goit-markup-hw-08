@@ -1,3 +1,4 @@
+
 .modal {
     position: absolute;
     top: 50%;
@@ -12,6 +13,10 @@
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     transition: transform 250ms $transition-timing-function;
+
+    .backdrop.is-hidden & {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
 }
 
 .modal__btn--close {
@@ -69,16 +74,6 @@
 
 .label__thumb {
     position: relative;
-
-    &:hover .label__imput,
-    &:focus-within .label__imput {
-        border-color: $accent-color;
-    }
-
-    &:hover .label__icon,
-    &:focus-within .label__icon {
-        fill: $accent-color;
-    }
 }
 
 .label__imput {
@@ -89,6 +84,11 @@
     padding: 12px 16px 12px 42px;
     outline: none;
     transition: border-color 250ms $transition-timing-function;
+
+    .label__thumb:hover &,
+    .label__thumb:focus-within & {
+        border-color: $accent-color;
+    }
 }
 
 .label__icon {
@@ -99,17 +99,16 @@
     height: 18px;
     transform: translateY(-50%);
     transition: fill 250ms $transition-timing-function;
-}
 
+    .label__thumb:hover &,
+    .label__thumb:focus-within & {
+        fill: $accent-color;
+    }
+}
 .label__imput--textarea {
     height: 120px;
     padding: 12px 16px;
     resize: none;
-
-    &:focus .label__placeholder,
-    &:not(:placeholder-shown)+.label__placeholder {
-        opacity: 0;
-    }
 }
 
 .label__placeholder {
@@ -120,9 +119,14 @@
     line-height: 1.14;
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
+
+    .label__imput--textarea:focus &,
+    .label__imput--textarea:not(:placeholder-shown)+& {
+        opacity: 0;
+    }
+
     /* transition: opacity 250ms var(--transition-timing-function); */
 }
-
 
 
 .checkbox {
@@ -134,19 +138,6 @@
 
 .checkbox__browser {
     @extend %visually-hidden;
-
-    &:hover+.checkbox__costom,
-    &:focus+.checkbox__costom {
-        border-color: $accent-color;
-    }
-
-    &:checked+.checkbox__costom {
-        background-color: $accent-color;
-        border-color: $accent-color;
-        background-image: url(../images/svg/icon-check.svg);
-        background-size: contain;
-        background-origin: border-box;
-    }
 }
 
 .checkbox__costom {
@@ -160,6 +151,18 @@
         background-image 250ms $transition-timing-function,
         border-color 250ms $transition-timing-function;
 
+    .checkbox__browser:hover + &,
+    .checkbox__browser:focus + & {
+        border-color: $accent-color;
+    }
+
+    .checkbox__browser:checked + & {
+        background-color: $accent-color;
+        border-color: $accent-color;
+        background-image: url(../images/svg/icon-check.svg);
+        background-size: contain;
+        background-origin: border-box;
+    }
 }
 
 .checkbox__text {
@@ -172,17 +175,17 @@
 
     position: relative;
     color: $accent-color;
-}
 
-.checkbox__link::after {
-    content: '';
+    &::after {
+        content: '';
 
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 0.7px;
-    background-color: $accent-color;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0.7px;
+        background-color: $accent-color;
+    }
 }
 
 .modal__btn--submit {

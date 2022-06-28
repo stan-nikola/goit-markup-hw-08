@@ -59,10 +59,7 @@
     position: relative;
     display: flex;
     justify-content: center;
-    &:focus .footer-subscribe__placeholder,
-    &:not(:placeholder-shown)+.footer-subscribe__placeholder {
-        opacity: 0;
-    }
+   
 }
 
 .footer-subscribe__field {
@@ -82,9 +79,6 @@
         border-color: $accent-color;
     }
 
-    &:not(:placeholder-shown)+.footer-subscribe__placeholder {
-        opacity: 0;
-    }
 }
 
 .footer-subscribe__placeholder {
@@ -96,9 +90,14 @@
     font-size: 16px;
     line-height: 1.25;
     color: $footer-text-color;
-    /* transition: opacity 250ms $transition-timing-function); */
-}
 
+    .footer-subscribe__form:focus + &,
+    .footer-subscribe__field:not(:placeholder-shown)+ &
+     {
+        opacity: 0;
+    }
+    //  transition: opacity 100ms $transition-timing-function; 
+}
 .footer-subscribe-btn {
     @extend %button;
     display: flex;
