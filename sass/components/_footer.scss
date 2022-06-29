@@ -2,32 +2,60 @@
     background-color: $secondary-bgr-color;
     padding: 60px 0;
 }
-.footer__title{
+
+.footer__title {
     @extend %visually-hidden;
 }
+
 .footer__item {
     @extend %container;
-    display: flex;
-    align-items: baseline;
+
+    @media screen and (max-width: 767px) {
+        text-align: center;
+
+    }
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width:1199px) {
+        padding-left: 76px;
+        padding-right: 89px;
+    }
+
 }
 
 .footer-contacts {
-    margin-right: 70px;
+    @media screen and (max-width: 767px) {
+        margin-bottom: 60px;
+    }
+
+    @media screen and (min-width:$tablet) and (max-width:1199px) {
+        margin-right: auto;
+    }
+
+    @media screen and (min-width:$desctop) {
+        margin-right: 70px;
+    }
+
 }
 
 .footer-contacts__list {
     @extend %list;
 }
 
-.footer-contacts__item{
+.footer-contacts__item {
     &:not(:last-child) {
-            margin-bottom: 9px;
-        }
+        margin-bottom: 9px;
+    }
 }
 
 .footer-contacts__link {
     @extend %link;
-    
+
     line-height: 1.71;
     color: $footer-text-color;
     display: block;
@@ -52,19 +80,44 @@
     margin-bottom: 20px;
 }
 
-.footer-subscribe {
-    margin-left: auto;
+.footer-social {
+    @media screen and (max-width: 767px) {
+        margin-bottom: 60px;
+    }
+          @media screen and (min-width:$desctop) {
+              margin-right: auto;
+          }
 }
 
-.footer-subscribe__form {
+.footer-subscribe {
+    @media screen and (min-width:$tablet) and (max-width:1199px) {
+        margin: 60px auto 0 auto;
+        text-align: center;
+    }
+}
+.footer-subscribe__form{
+    @media screen and (min-width:$desctop){
+        display: flex;
+    }
+}
+.footer-subscribe__input {
     position: relative;
-    display: flex;
-    justify-content: center;
-   
+
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 20px;
+        width: 450px;
+    }
+
+    @media screen and (min-width:$desctop) {
+    width: 358px;
+    margin-right: 12px;
+    
+    }
 }
 
 .footer-subscribe__field {
-    width: 358px;
+    position: relative;
+    width: 100%;
     height: 50px;
     background-color: inherit;
     color: $second-text-color;
@@ -92,21 +145,25 @@
     line-height: 1.25;
     color: $footer-text-color;
 
-    .footer-subscribe__form:focus + &,
-    .footer-subscribe__field:not(:placeholder-shown)+ &
-     {
+    .footer-subscribe__form:focus+&,
+    .footer-subscribe__field:not(:placeholder-shown)+& {
         opacity: 0;
     }
+
     //  transition: opacity 100ms $transition-timing-function; 
 }
+
 .footer-subscribe-btn {
+    // margin-left: 12px;
+
     @extend %button;
-    @include centered-flex ($type:inline-flex);
-    
+    @include centered-flex ($type: inline-flex);
+    height: 50px;
+
     padding: 0 28px;
     background-color: $accent-color;
     color: $second-text-color;
-    margin-left: 12px;
+
     font-weight: 700;
     line-height: 1.88;
     letter-spacing: 0.06em;

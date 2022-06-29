@@ -10,7 +10,8 @@
     @extend %list;
 
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    // justify-content: center;
     margin-bottom: 50px;
 }
 
@@ -45,19 +46,29 @@
 .project {
     @extend %list;
 
-    display: flex;
-    flex-wrap: wrap;
-    margin: -15px;
+    @media screen and (min-width:$tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+     
+    }
 }
-
+      
 .project__item {
-    width: 370px;
-    margin: 15px;
+    @media screen and (max-width:767px) {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+     @media screen and (min-width:$tablet) {
+            margin: 15px;
+            width: calc((100% - 15px*4)/2); 
+      
+         
+        }
 }
-
 .project__link {
     @extend %link;
-
     display: block;
     transition: box-shadow 250ms $transition-timing-function;
 
@@ -99,7 +110,8 @@
 }
 
 .project__meta {
-    border: 1px solid #eeeeee;
+    // border: 1px solid #eeeeee;
+border: 1px solid red;
     border-top: none;
     padding: 20px 24px;
 }

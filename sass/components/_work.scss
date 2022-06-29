@@ -1,8 +1,11 @@
 .work {
     padding-top: 0;
     @extend %section;
-}
 
+    @media  screen and (max-width: 1199px) {
+        display: none;
+    }
+}
 .container {
     @extend %container;
 }

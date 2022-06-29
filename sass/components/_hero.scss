@@ -5,7 +5,7 @@
 }
 
 .hero__overlay {
-    max-width: 1600px;
+    // min-width: 1600px;
     height: 600px;
     margin: 0 auto;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
@@ -17,14 +17,17 @@
 
 .container {
     @extend %container;
+
+   
+
 }
 
 .hero__title {
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    width: 696px;
-    margin: 0 auto 30px auto;
+    // width: 696px;
+    // margin: 0 auto 30px auto;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: $second-text-color;
