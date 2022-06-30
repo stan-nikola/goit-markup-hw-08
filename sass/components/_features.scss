@@ -1,6 +1,8 @@
 .features {
-    @extend %container;
     @extend %section;
+}
+.contanier{
+    @extend %container;
 }
 
 .features__title {

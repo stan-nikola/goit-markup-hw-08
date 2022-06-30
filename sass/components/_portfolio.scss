@@ -11,13 +11,38 @@
 
     display: flex;
     flex-wrap: wrap;
-    // justify-content: center;
-    margin-bottom: 50px;
+
+    @media screen and (max-width:767px) {
+        margin-bottom: 40px;
+    }
+
+    @media screen and (min-width:$tablet) {
+        justify-content: center;
+    }
+
+    @media screen and (min-width:$tablet) and (max-width: 1199px) {
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width:$desctop) {
+        margin-bottom: 50px;
+    }
+
 }
 
 
-.filter__item:not(:last-child) {
-    margin-right: 8px;
+.filter__item {
+    &:not(:last-child) {
+        margin-right: 8px;
+    }
+
+    @media screen and (max-width:767px) {
+        &:nth-child(-n+3) {
+            margin-bottom: 15px;
+        }
+
+    }
+
 }
 
 .filter__btn {
@@ -49,27 +74,32 @@
     @media screen and (min-width:$tablet) {
         display: flex;
         flex-wrap: wrap;
-        margin: -15px;
-     
+        gap: 30px;
     }
 }
-      
+
 .project__item {
     @media screen and (max-width:767px) {
         &:not(:last-child) {
             margin-bottom: 30px;
         }
     }
-     @media screen and (min-width:$tablet) {
-            margin: 15px;
-            width: calc((100% - 15px*4)/2); 
-      
-         
-        }
+
+    @media screen and (min-width:$tablet) and (max-width:1199px) {
+        width: calc((100% - 30px)/2);
+    }
+    @media screen and (min-width:$desctop){
+        width: calc((100% - 30px*2)/3);
+
+    }
 }
+
 .project__link {
     @extend %link;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
     transition: box-shadow 250ms $transition-timing-function;
 
     &:hover,
@@ -110,10 +140,11 @@
 }
 
 .project__meta {
-    // border: 1px solid #eeeeee;
-border: 1px solid red;
+    border: 1px solid #eeeeee;
+
     border-top: none;
     padding: 20px 24px;
+    flex-grow: 1;
 }
 
 .project__name {
