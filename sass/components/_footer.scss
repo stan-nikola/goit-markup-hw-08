@@ -93,28 +93,32 @@
     @media screen and (min-width:$tablet) and (max-width:1199px) {
         margin: 60px auto 0 auto;
         text-align: center;
+        width: 100%;
+    }
+    @media screen and (min-width:$desctop){
+        width:570px ;
     }
 }
 .footer-subscribe__form{
     @media screen and (min-width:$desctop){
         display: flex;
     }
+          
 }
 .footer-subscribe__input {
     position: relative;
 
     @media screen and (max-width: 1199px) {
         margin-bottom: 20px;
-        width: 450px;
+        width: 100%;
     }
 
     @media screen and (min-width:$desctop) {
-    width: 358px;
-    margin-right: 12px;
-    
+        width: 100%;
+        margin-right: 12px;
+
     }
 }
-
 .footer-subscribe__field {
     position: relative;
     width: 100%;

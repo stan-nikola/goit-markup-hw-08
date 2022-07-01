@@ -832,6 +832,12 @@ address {
   .footer-subscribe {
     margin: 60px auto 0 auto;
     text-align: center;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-subscribe {
+    width: 570px;
   }
 }
 
@@ -849,12 +855,12 @@ address {
 @media screen and (max-width: 1199px) {
   .footer-subscribe__input {
     margin-bottom: 20px;
-    width: 450px;
+    width: 100%;
   }
 }
 @media screen and (min-width: 1200px) {
   .footer-subscribe__input {
-    width: 358px;
+    width: 100%;
     margin-right: 12px;
   }
 }
