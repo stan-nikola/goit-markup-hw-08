@@ -16,15 +16,15 @@
     flex-wrap: wrap;
 
     @media screen and (max-width: 1199px) {
-       gap: 30px;
+        margin: -15px;
 
     }
 }
 
 .client__item {
     @media screen and (max-width:767px) {
-        width: calc((100% - 15px*2)/2);
-        
+        width: calc((100% - 15px*4)/2);
+        margin: 15px;
     }
 
     @media screen and (min-width:$tablet) and (max-width:1199px) {
