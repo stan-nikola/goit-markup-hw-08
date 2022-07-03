@@ -16,12 +16,18 @@
   <title>WebStudio</title>
 </head>
 
-<body>
+<body data-body>
   <header class="header">
 
     <div class="header__item">
       <a class="logo" href="./index.html"> <span class="logo__accent">Web</span>Studio </a>
-      <div class="burger-menu" data-menu>
+      <button class="burger_btn" data-menu-button type="button">
+        <svg width="24" height="16" aria-label="mobile menu switch" aria-controls="burger-menu">
+          <use class="icon-menu" href="./images/icons.svg#icon-burger"></use>
+          <use class="icon-cross" href="./images/icons.svg#icon-cross"></use>
+        </svg>
+      </button>
+      <div class="burger-menu" id="burger-menu" data-menu>
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item  nav__item--current">
@@ -52,12 +58,7 @@
           </li>
         </ul>
       </div>
-      <button class="burger_btn" data-menu-button type="button">
-        <svg width="24" height="16" aria-label="mobile menu switch">
-          <use class="icon-menu" href="./images/icons.svg#icon-burger"></use>
-          <use class="icon-cross" href="./images/icons.svg#icon-cross"></use>
-        </svg>
-      </button>
+
     </div>
   </header>
 

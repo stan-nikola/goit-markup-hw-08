@@ -24,6 +24,10 @@ address {
   font-style: normal;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .footer__item, y .container, .contanier, .container, .header__item {
   padding-left: 15px;
   padding-right: 15px;
@@ -85,10 +89,17 @@ address {
 
 .client__title, .team__title, .work__title {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.36;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .client__title, .team__title, .work__title {
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
 }
 
 .modal__btn--submit, .footer-subscribe-btn, .filter__btn, .hero__btn {
@@ -124,6 +135,7 @@ address {
 @media screen and (max-width: 767px) {
   .burger-menu {
     position: absolute;
+    left: 0;
     width: 100%;
     background-color: #FFF;
     width: 100%;
@@ -206,10 +218,10 @@ address {
   margin-right: 50px;
 }
 
+.nav__item--current {
+  color: #2196f3;
+}
 @media screen and (min-width: 768px) {
-  .nav__item--current {
-    color: #2196f3;
-  }
   .nav__item--current::after {
     content: "";
     position: absolute;
@@ -405,7 +417,7 @@ address {
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .features__list {
-    margin: -15px;
+    gap: 30px;
   }
 }
 
@@ -416,12 +428,7 @@ address {
 }
 @media screen and (min-width: 768px) {
   .features__item {
-    width: calc((100% - 60px) / 2);
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .features__item {
-    margin: 15px;
+    width: calc((100% - 30px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
