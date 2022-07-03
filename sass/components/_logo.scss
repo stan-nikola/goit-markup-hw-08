@@ -1,25 +1,36 @@
 .logo {
     @extend %link;
-
-    @media screen and (max-width:1199px) {
-        font-size: 24px;
-        line-height: 1.16;
-    }
-
     @media screen and (max-width:767px) {
         display: block;
-        padding: 16px 0;
+        
     }
+         @media screen and (max-width:1199px) {
+             font-size: 24px;
+             line-height: 1.16;
+         }
 
     font-family: $secondary-font;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
+
+   
+}
+.logo--header{
+    @media screen and (max-width:767px){
+position: absolute;
+    top: 16px;
+    left: 0;
+    z-index: 3;
+    transform: translateY(0);
+    transition: transform 600ms $transition-timing-function ;
+    }
 }
 
 @media screen and (max-width:767px) {
     .logo--hidden {
-        display: none;
+            transform: translateY(-50px);
+        transition: transform 600ms $transition-timing-function 250ms;
     }
 }
 

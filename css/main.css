@@ -149,13 +149,17 @@ address {
     padding: 48px 40px;
     -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
-    display: none;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .burger-menu.is-open {
     display: block;
-  }
-  .burger-menu.is-open {
-    display: block;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 @media screen and (min-width: 768px) {
@@ -170,7 +174,7 @@ address {
 }
 .burger-menu__btn {
   position: absolute;
-  top: 22px;
+  top: 12px;
   right: 23px;
   z-index: 2;
   display: -webkit-inline-box;
@@ -185,22 +189,50 @@ address {
   background-color: transparent;
   border: none;
   margin: 0;
-  padding: 0;
+  padding: 10px;
   cursor: pointer;
-}
-.burger-menu__btn .icon-cross {
-  display: none;
-}
-.burger-menu__btn.is-open .icon-cross {
-  display: block;
-}
-.burger-menu__btn.is-open .icon-menu {
-  display: none;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) {
   .burger-menu__btn {
     display: none;
   }
+}
+.burger-menu__btn .icon-cross {
+  opacity: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+.burger-menu__btn.is-open .icon-cross {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.burger-menu__btn.is-open .icon-menu {
+  opacity: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+.burger-menu__btn .icon-menu {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.burger-menu__btn:hover, .burger-menu__btn:focus-visible {
+  color: #2196f3;
+}
+
+.burger-menu__btn-icon {
+  fill: currentColor;
 }
 
 @media screen and (max-width: 767px) {
@@ -388,22 +420,41 @@ address {
   font-size: 26px;
   line-height: 1.19;
 }
+@media screen and (max-width: 767px) {
+  .logo {
+    display: block;
+  }
+}
 @media screen and (max-width: 1199px) {
   .logo {
     font-size: 24px;
     line-height: 1.16;
   }
 }
+
 @media screen and (max-width: 767px) {
-  .logo {
-    display: block;
-    padding: 16px 0;
+  .logo--header {
+    position: absolute;
+    top: 16px;
+    left: 0;
+    z-index: 3;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: -webkit-transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: -webkit-transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
 @media screen and (max-width: 767px) {
   .logo--hidden {
-    display: none;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    -webkit-transition: -webkit-transform 600ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    transition: -webkit-transform 600ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, -webkit-transform 600ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
   }
 }
 .logo__accent {

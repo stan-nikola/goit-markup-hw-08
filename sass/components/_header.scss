@@ -1,8 +1,8 @@
 .header {
-    @media screen and (min-width:$tablet){
-border-bottom: 1px solid $header-border-color;
+    @media screen and (min-width:$tablet) {
+        border-bottom: 1px solid $header-border-color;
     }
- 
+
 }
 
 .header__item {
@@ -11,12 +11,14 @@ border-bottom: 1px solid $header-border-color;
 
     @media screen and (max-width: 767px) {
         height: 60px;
+
     }
 
     @media screen and (min-width: $tablet) {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
     }
 }
 
@@ -32,15 +34,15 @@ border-bottom: 1px solid $header-border-color;
 
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
 
-        display: none;
+        transform: translateY(-100%);
+        transition: transform 250ms$transition-timing-function;
 
         &.is-open {
             display: block;
+            transform: translateY(0);
         }
 
-        &.is-open {
-            display: block;
-        }
+
     }
 
     @media screen and (min-width: $tablet) {
@@ -52,38 +54,64 @@ border-bottom: 1px solid $header-border-color;
 }
 
 .burger-menu__btn {
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+
     position: absolute;
-    top: 22px;
+    top: 12px;
     right: 23px;
     z-index: 2;
     @include centered-flex($type: inline-flex);
     background-color: transparent;
     border: none;
     margin: 0;
-    padding: 0;
+    padding: 10px;
     cursor: pointer;
 
+    transition: color 250ms $transition-timing-function;
+
     & .icon-cross {
-        display: none;
+        opacity: 0;
+        transform: translateY(-100%);
     }
 
     &.is-open .icon-cross {
-        display: block;
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 250ms $transition-timing-function,
+            transform 250ms $transition-timing-function;
     }
 
     &.is-open .icon-menu {
-        display: none;
+        opacity: 0;
+        transform: translateY(-100%);
     }
 
-    @media screen and (min-width: $tablet) {
-        display: none;
+  .icon-menu {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 250ms $transition-timing-function,
+                transform 250ms $transition-timing-function;
+
+    }
+
+
+    &:hover,
+    &:focus-visible {
+        color: $accent-color;
     }
 }
 
+.burger-menu__btn-icon {
+    fill: currentColor;
+}
+
 .nav {
-    @media screen and (max-width: 767px){
+    @media screen and (max-width: 767px) {
         margin-bottom: 302px;
     }
+
     @media screen and (min-width: $tablet) {
         margin-right: 84px;
     }
@@ -117,6 +145,7 @@ border-bottom: 1px solid $header-border-color;
         }
     }
 }
+
 .nav__item--current {
     color: $accent-color ;
     position: relative;
@@ -166,9 +195,11 @@ border-bottom: 1px solid $header-border-color;
 
 .contacts {
     @extend %list;
-@media screen and (max-width:767px){
-    margin-bottom: 64px;
-}
+
+    @media screen and (max-width:767px) {
+        margin-bottom: 64px;
+    }
+
     @media screen and (min-width: $desctop) {
         display: flex;
         align-items: center;
@@ -177,10 +208,11 @@ border-bottom: 1px solid $header-border-color;
 
 .contacts__item {
     @media screen and (max-width:767px) {
-            &:not(:last-child){
-                margin-bottom: 32px;
-            }
+        &:not(:last-child) {
+            margin-bottom: 32px;
         }
+    }
+
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
         display: flex;
 
@@ -221,9 +253,11 @@ border-bottom: 1px solid $header-border-color;
             color: $accent-color;
         }
     }
+
     @media screen and (min-width:$tablet) and (max-width: 1199px) {
         font-size: 12px;
     }
+
     @media screen and (min-width: $desctop) {
         display: inline-flex;
         align-items: center;
@@ -233,9 +267,10 @@ border-bottom: 1px solid $header-border-color;
 
 
 .contacts__icon {
-    @media screen and (max-width:767px){
+    @media screen and (max-width:767px) {
         display: none;
     }
+
     margin-right: 10px;
     fill: currentColor;
 }
