@@ -157,7 +157,7 @@ address {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .burger-menu.is-open {
-    display: block;
+    opacity: 1;
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
@@ -172,6 +172,7 @@ address {
             align-items: center;
   }
 }
+
 .burger-menu__btn {
   position: absolute;
   top: 12px;
@@ -436,14 +437,14 @@ address {
   .logo--header {
     position: absolute;
     top: 16px;
-    left: 0;
+    left: 15px;
     z-index: 3;
     -webkit-transform: translateY(0);
             transform: translateY(0);
-    -webkit-transition: -webkit-transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: -webkit-transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
   }
 }
 
@@ -451,10 +452,10 @@ address {
   .logo--hidden {
     -webkit-transform: translateY(-50px);
             transform: translateY(-50px);
-    -webkit-transition: -webkit-transform 600ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
-    transition: -webkit-transform 600ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
-    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
-    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, -webkit-transform 600ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 .logo__accent {

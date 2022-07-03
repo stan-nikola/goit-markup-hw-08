@@ -38,11 +38,9 @@
         transition: transform 250ms$transition-timing-function;
 
         &.is-open {
-            display: block;
+            opacity: 1;
             transform: translateY(0);
         }
-
-
     }
 
     @media screen and (min-width: $tablet) {
@@ -50,7 +48,6 @@
         align-items: center;
     }
 
-    @media screen and (min-width: $desctop) {}
 }
 
 .burger-menu__btn {
@@ -70,6 +67,7 @@
     cursor: pointer;
 
     transition: color 250ms $transition-timing-function;
+               
 
     & .icon-cross {
         opacity: 0;
