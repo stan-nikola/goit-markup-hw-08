@@ -15,7 +15,12 @@
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
+}
 
+@media screen and (max-width:767px) {
+    .logo--hidden {
+        display: none;
+    }
 }
 
 .logo__accent {

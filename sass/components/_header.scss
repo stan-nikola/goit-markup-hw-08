@@ -1,44 +1,61 @@
 .header {
-    border-bottom: 1px solid $header-border-color;
+    @media screen and (min-width:$tablet){
+border-bottom: 1px solid $header-border-color;
+    }
+ 
 }
 
 .header__item {
-   
+    position: relative;
     @extend %container;
-position: relative;
-    @media screen and (min-width:$tablet) {
+
+    @media screen and (max-width: 767px) {
+        height: 60px;
+    }
+
+    @media screen and (min-width: $tablet) {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
 }
+
 .burger-menu {
-    @media screen and (max-width:767px) {
+    @media screen and (max-width: 767px) {
         position: absolute;
+        top: 0;
         left: 0;
-     
-       width: 100%;
-        background-color: #FFF;
+        z-index: 1;
         width: 100%;
+        background-color: #fff;
+        padding: 48px 40px;
+
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+
         display: none;
+
+        &.is-open {
+            display: block;
+        }
 
         &.is-open {
             display: block;
         }
     }
 
-    @media screen and (min-width:$tablet) {
+    @media screen and (min-width: $tablet) {
         display: flex;
         align-items: center;
     }
 
-    @media screen and (min-width:$desctop) {}
+    @media screen and (min-width: $desctop) {}
 }
 
-.burger_btn {
+.burger-menu__btn {
     position: absolute;
     top: 22px;
     right: 23px;
+    z-index: 2;
     @include centered-flex($type: inline-flex);
     background-color: transparent;
     border: none;
@@ -49,25 +66,29 @@ position: relative;
     & .icon-cross {
         display: none;
     }
-    &.is-open .icon-cross{
+
+    &.is-open .icon-cross {
         display: block;
     }
 
-    &.is-open .icon-menu{
+    &.is-open .icon-menu {
         display: none;
     }
-    @media screen and (min-width:$tablet){
+
+    @media screen and (min-width: $tablet) {
         display: none;
     }
 }
 
 .nav {
-    @media screen and (min-width:$tablet) {
-
+    @media screen and (max-width: 767px){
+        margin-bottom: 302px;
+    }
+    @media screen and (min-width: $tablet) {
         margin-right: 84px;
     }
 
-    @media screen and (min-width:$desctop) {
+    @media screen and (min-width: $desctop) {
         margin-right: 305px;
     }
 }
@@ -75,23 +96,30 @@ position: relative;
 .nav__list {
     @extend %list;
 
-    @media screen and (min-width:$tablet) {
+    @media screen and (min-width: $tablet) {
         display: flex;
         align-items: center;
     }
-
 }
 
 .nav__item {
-    position: relative;
+    @media screen and (max-width: 767px) {
+        position: relative;
 
-    &:not(:last-child) {
-        margin-right: 50px;
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+
+    @media screen and (min-width: $tablet) {
+        &:not(:last-child) {
+            margin-right: 50px;
+        }
     }
 }
-
 .nav__item--current {
     color: $accent-color ;
+    position: relative;
 
     @media screen and (min-width:$tablet) {
         &::after {
@@ -107,10 +135,18 @@ position: relative;
         }
     }
 }
+
 .header__link {
     @extend %link;
 
-    @media screen and (min-width:$tablet) {
+    @media screen and (max-width: 767px) {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 1.18;
+        letter-spacing: 0.02em;
+    }
+
+    @media screen and (min-width: $tablet) {
         display: inline-flex;
         align-items: center;
         padding: 32px 0 31px 0;
@@ -130,16 +166,22 @@ position: relative;
 
 .contacts {
     @extend %list;
-
-    @media screen and (min-width:$desctop) {
+@media screen and (max-width:767px){
+    margin-bottom: 64px;
+}
+    @media screen and (min-width: $desctop) {
         display: flex;
         align-items: center;
-
     }
 }
 
 .contacts__item {
-    @media screen and (min-width:$tablet) and (max-width:1199px) {
+    @media screen and (max-width:767px) {
+            &:not(:last-child){
+                margin-bottom: 32px;
+            }
+        }
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
         display: flex;
 
         &:not(:last-child) {
@@ -147,22 +189,16 @@ position: relative;
         }
     }
 
-    @media screen and (min-width:$desctop) {
+    @media screen and (min-width: $desctop) {
         &:not(:last-child) {
             margin-right: 50px;
         }
     }
 }
 
-
 .contacts__link {
-    display: flex;
-
-    @media screen and (max-width:1199px) {
-        font-size: 12px;
-    }
-
     @extend %link;
+    display: flex;
     color: $third-text-color;
     transition: color 250ms $transition-timing-function;
     font-weight: 500;
@@ -173,17 +209,33 @@ position: relative;
     &:hover,
     &:focus {
         color: $accent-color;
-
     }
 
-    @media screen and (min-width:$desctop) {
+    @media screen and (max-width: 767px) {
+        font-size: 24px;
+        line-height: 1.16;
+
+        &--burgger-menu-tel {
+            font-size: 34px;
+            line-height: 1.18;
+            color: $accent-color;
+        }
+    }
+    @media screen and (min-width:$tablet) and (max-width: 1199px) {
+        font-size: 12px;
+    }
+    @media screen and (min-width: $desctop) {
         display: inline-flex;
         align-items: center;
         padding: 32px 0 31px 0;
     }
 }
 
+
 .contacts__icon {
+    @media screen and (max-width:767px){
+        display: none;
+    }
     margin-right: 10px;
     fill: currentColor;
 }
