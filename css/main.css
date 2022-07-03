@@ -110,10 +110,8 @@ address {
   text-align: center;
 }
 
-@media screen and (min-width: 768px) {
-  .header {
-    border-bottom: 1px solid #ececec;
-  }
+.header {
+  border-bottom: 1px solid #ececec;
 }
 
 .header__item {
@@ -471,7 +469,16 @@ address {
 .hero {
   background-color: #2f303a;
   text-align: center;
-  padding: 200px 0;
+}
+@media screen and (max-width: 1199px) {
+  .hero {
+    padding: 118px 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding: 200px 0;
+  }
 }
 
 .hero__overlay {

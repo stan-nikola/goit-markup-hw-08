@@ -1,7 +1,13 @@
 .hero {
     background-color: $secondary-bgr-color;
     text-align: center;
-    padding: 200px 0;
+    @media screen and (max-width:1199px){
+        padding: 118px 0;
+    }
+        @media screen and (min-width:$desctop){
+padding: 200px 0;
+        }
+    
 }
 
 .hero__overlay {
@@ -17,8 +23,6 @@
 
 .container {
     @extend %container;
-
-   
 
 }
 

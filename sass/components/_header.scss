@@ -1,7 +1,7 @@
 .header {
-    @media screen and (min-width:$tablet) {
-        border-bottom: 1px solid $header-border-color;
-    }
+
+    border-bottom: 1px solid $header-border-color;
+
 
 }
 
@@ -67,7 +67,7 @@
     cursor: pointer;
 
     transition: color 250ms $transition-timing-function;
-               
+
 
     & .icon-cross {
         opacity: 0;
@@ -86,11 +86,11 @@
         transform: translateY(-100%);
     }
 
-  .icon-menu {
+    .icon-menu {
         opacity: 1;
         transform: translateY(0);
         transition: opacity 250ms $transition-timing-function,
-                transform 250ms $transition-timing-function;
+            transform 250ms $transition-timing-function;
 
     }
 
@@ -99,6 +99,7 @@
     &:focus-visible {
         color: $accent-color;
     }
+
 }
 
 .burger-menu__btn-icon {
