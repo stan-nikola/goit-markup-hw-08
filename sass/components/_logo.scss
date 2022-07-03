@@ -1,10 +1,21 @@
 .logo {
     @extend %link;
 
+    @media screen and (max-width:1199px) {
+        font-size: 24px;
+        line-height: 1.16;
+    }
+
+    @media screen and (max-width:767px) {
+        display: block;
+        padding: 16px 0;
+    }
+
     font-family: $secondary-font;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
+
 }
 
 .logo__accent {

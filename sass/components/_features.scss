@@ -9,40 +9,43 @@
     @extend %visually-hidden;
 
 }
-
 .features__list {
     @extend %list;
 
     @media screen and (min-width:$tablet) {
         display: flex;
         flex-wrap: wrap;
-    }
-    @media screen and (min-width:$tablet) and (max-width: 1199px) {
-        margin: -15px
-    }
-}
 
+        @media screen and (max-width:1199px) {
+            margin: -15px;
+        }
+
+    }
+
+}
 .features__item {
-    @media screen and(max-width:767px) {
-        &:not(:last-child) {
+    &:not(:last-child) {
+        @media screen and (max-width:767px) {
             margin-bottom: 30px;
         }
     }
 
-    @media screen and (min-width:$tablet) and (max-width: 1199px) {
-        width: calc((100% - 4*15px)/2);
-        margin: 15px;
-    }
+    @media screen and (min-width:$tablet) {
+        width: calc((100% - 15px*4)/2);
 
-    @media screen and (min-width:$desctop) {
-        width: calc((100% - 30px*3) / 4);
-
-
-        &:not(:last-child) {
-            margin-right: 30px;
+        @media screen and (max-width:1199px) {
+            margin: 15px;
         }
     }
+        @media screen and (min-width:$desctop) {
+            width: calc((100% - 30px*3)/4);
+            &:not(:last-child){
+                margin-right: 30px;
+            }
+        }
+
 }
+
 
 .feature__box {
     @include centered-flex();

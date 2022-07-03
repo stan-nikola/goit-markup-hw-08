@@ -18,37 +18,46 @@
 
 <body>
   <header class="header">
+
     <div class="header__item">
-      <nav class="nav">
-        <a class="logo" href="./index.html"> <span class="logo__accent">Web</span>Studio </a>
-        <ul class="nav__list">
-          <li class="nav__item  nav__item--current">
-            <a class="header__link" href="./index.html"> Студия</a>
+      <a class="logo" href="./index.html"> <span class="logo__accent">Web</span>Studio </a>
+      <div class="burger-menu" data-menu>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item  nav__item--current">
+              <a class="header__link" href="./index.html"> Студия</a>
+            </li>
+            <li class="nav__item">
+              <a class="header__link " href="./portfolio.html"> Портфолио</a>
+            </li>
+            <li class="nav__item">
+              <a class="header__link" href="">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="contacts">
+          <li class="contacts__item">
+            <a class="contacts__link" href="mailto:info@devstudio.com">
+              <svg class="contacts__icon" width="16" height="12">
+                <use href="./images/icons.svg#icon-mail"></use>
+              </svg>
+              info@devstudio.com</a>
           </li>
-          <li class="nav__item">
-            <a class="header__link " href="./portfolio.html"> Портфолио</a>
-          </li>
-          <li class="nav__item">
-            <a class="header__link" href="">Контакты</a>
+          <li class="contacts__item">
+            <a class="contacts__link" href="tel:+380961111111">
+              <svg class="contacts__icon" width="10" height="16">
+                <use href="./images/icons.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11</a>
           </li>
         </ul>
-      </nav>
-      <ul class="contacts">
-        <li class="contacts__item">
-          <a class="contacts__link" href="mailto:info@devstudio.com">
-            <svg class="contacts__icon" width="16" height="12">
-              <use href="./images/icons.svg#icon-mail"></use>
-            </svg>
-            info@devstudio.com</a>
-        </li>
-        <li class="contacts__item">
-          <a class="contacts__link" href="tel:+380961111111">
-            <svg class="contacts__icon" width="10" height="16">
-              <use href="./images/icons.svg#icon-smartphone"></use>
-            </svg>
-            +38 096 111 11 11</a>
-        </li>
-      </ul>
+      </div>
+      <button class="burger_btn" data-menu-button type="button">
+        <svg width="24" height="16" aria-label="mobile menu switch">
+          <use class="icon-menu" href="./images/icons.svg#icon-burger"></use>
+          <use class="icon-cross" href="./images/icons.svg#icon-cross"></use>
+        </svg>
+      </button>
     </div>
   </header>
 
@@ -443,7 +452,7 @@
     <div class="modal" role="group">
       <button class="modal__btn--close" type="button" data-modal-close>
         <svg width="11" height="11">
-          <use href="./images/icons.svg#icon-modal-close"></use>
+          <use href="./images/icons.svg#icon-cross"></use>
         </svg>
       </button>
       <p class="modal__title">Оставьте свои данные, мы вам перезвоним</p>
@@ -488,7 +497,7 @@
 
         <label class="checkbox">
           <input class="checkbox__browser" name="user-policy" type="checkbox" required />
-          <span class="checkbox__costom"></span>
+          <span class="checkbox__custom"></span>
           <span class="checkbox__text">Соглашаюсь с рассылкой и принимаю
             <a class="checkbox__link" href="" target="_blank">Условия договора</a>
           </span>
@@ -498,6 +507,7 @@
     </div>
   </div>
   <script src="./js/modal.js"></script>
+  <script src="./js/burger-menu.js"></script>
 </body>
 
 </html>

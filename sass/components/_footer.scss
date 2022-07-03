@@ -21,7 +21,7 @@
         align-items: baseline;
     }
 
-    @media screen and (min-width: $tablet) and (max-width:1199px) {
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
         padding-left: 76px;
         padding-right: 89px;
     }
@@ -33,7 +33,7 @@
         margin-bottom: 60px;
     }
 
-    @media screen and (min-width:$tablet) and (max-width:1199px) {
+    @media screen and (min-width:$tablet) and (max-width: 1199px) {
         margin-right: auto;
     }
 
@@ -90,7 +90,7 @@
 }
 
 .footer-subscribe {
-    @media screen and (min-width:$tablet) and (max-width:1199px) {
+    @media screen and (min-width:$tablet) and (max-width: 1199px) {
         margin: 60px auto 0 auto;
         text-align: center;
         width: 450px;
