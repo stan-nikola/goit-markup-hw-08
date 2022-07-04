@@ -1,8 +1,11 @@
 .modal {
     @media screen and (max-width: 479px){
+        width: 90%;
 height: 500px;
 padding: 40px 20px;
+
     }
+    
     @media screen and (min-width:$mobile) and (max-width: 1199px) {
         width: 450px;
         height: 609px;
@@ -175,9 +178,6 @@ padding: 40px 20px;
 }
 
 .checkbox__custom {
-    @media screen and (max-width:479px) {
-            width: 27px;
-        }
     width: 16px;
     height: 15px;
     border: 2px solid;
