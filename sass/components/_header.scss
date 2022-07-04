@@ -33,12 +33,12 @@
 
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
 
-        transform: translateY(-101%);
+        transform: translateX(-130%);
         transition: transform 250ms$transition-timing-function;
 
         &.is-open {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateX(0);
         }
     }
 
@@ -70,24 +70,24 @@
 
     & .icon-cross {
         opacity: 0;
-        transform: translateY(-100%);
+        transform: translateX(-100%);
     }
 
     &.is-open .icon-cross {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0);
         transition: opacity 250ms $transition-timing-function,
             transform 250ms $transition-timing-function;
     }
 
     &.is-open .icon-menu {
         opacity: 0;
-        transform: translateY(-100%);
+        transform: translateX(100%);
     }
 
     .icon-menu {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0);
         transition: opacity 250ms $transition-timing-function,
             transform 250ms $transition-timing-function;
 

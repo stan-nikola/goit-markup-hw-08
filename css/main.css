@@ -145,8 +145,8 @@ address {
     padding: 48px 40px;
     -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
-    -webkit-transform: translateY(-101%);
-            transform: translateY(-101%);
+    -webkit-transform: translateX(-130%);
+            transform: translateX(-130%);
     -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -154,8 +154,8 @@ address {
   }
   .burger-menu.is-open {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 @media screen and (min-width: 768px) {
@@ -198,13 +198,13 @@ address {
 }
 .burger-menu__btn .icon-cross {
   opacity: 0;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 .burger-menu__btn.is-open .icon-cross {
   opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -212,13 +212,13 @@ address {
 }
 .burger-menu__btn.is-open .icon-menu {
   opacity: 0;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 .burger-menu__btn .icon-menu {
   opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -456,23 +456,26 @@ address {
     position: absolute;
     top: 16px;
     left: 15px;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 100ms;
-    transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 100ms;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 100ms;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 100ms, -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 100ms;
+    z-index: 5;
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
 @media screen and (max-width: 767px) {
   .logo--hidden {
-    -webkit-transform: translateY(-140%);
-            transform: translateY(-140%);
-    -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 .logo__accent {
