@@ -6,12 +6,11 @@
 }
 
 .header__item {
-    position: relative;
     @extend %container;
 
-    @media screen and (max-width: 767px) {
-        height: 60px;
-
+    @media screen and  (max-width: 767px) {
+        position: relative;
+        height: 60px;   
     }
 
     @media screen and (min-width: $tablet) {
@@ -34,7 +33,7 @@
 
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
 
-        transform: translateY(-100%);
+        transform: translateY(-101%);
         transition: transform 250ms$transition-timing-function;
 
         &.is-open {
@@ -107,8 +106,12 @@
 }
 
 .nav {
+    
     @media screen and (max-width: 767px) {
         margin-bottom: 302px;
+        @media screen and (max-width: 479px) {
+                margin-bottom: 180px;
+            }
     }
 
     @media screen and (min-width: $tablet) {
@@ -168,6 +171,9 @@
     @extend %link;
 
     @media screen and (max-width: 767px) {
+        @media screen and (max-width: 479px) {
+                font-size: 30px;
+            }
         font-weight: 500;
         font-size: 40px;
         line-height: 1.18;
@@ -242,11 +248,17 @@
         color: $accent-color;
     }
 
-    @media screen and (max-width: 767px) {
+    @media screen  and (max-width: 767px) {
+        @media screen and (max-width: 479px) {
+                font-size: 16px;
+            }
         font-size: 24px;
         line-height: 1.16;
 
         &--burgger-menu-tel {
+            @media screen and (max-width: 479px) {
+            font-size: 24px;
+            }
             font-size: 34px;
             line-height: 1.18;
             color: $accent-color;

@@ -2,10 +2,12 @@
     @extend %list;
     
     display: flex;
+    
     justify-content: center;
 }
 .social--burger-menu{
 justify-content: flex-start;
+flex-wrap: wrap;
     @media screen and (min-width:$tablet){
         display: none;
     }
