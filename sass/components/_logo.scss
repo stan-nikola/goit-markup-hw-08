@@ -23,14 +23,14 @@ position: absolute;
     left: 15px;
    
     transform: translateY(0);
-    transition: transform 250ms $transition-timing-function 50ms ;
+    transition: transform 250ms $transition-timing-function 100ms;
     }
 
 }
 
 @media screen and (max-width:767px) {
     .logo--hidden {
-            transform: translateY(50px);
+            transform: translateY(-140%);
         transition: transform 250ms $transition-timing-function ;
     }
 }

@@ -458,17 +458,17 @@ address {
     left: 15px;
     -webkit-transform: translateY(0);
             transform: translateY(0);
-    -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 50ms;
-    transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 50ms;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 50ms;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 50ms, -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 50ms;
+    -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 100ms;
+    transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 100ms;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 100ms;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 100ms, -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 100ms;
   }
 }
 
 @media screen and (max-width: 767px) {
   .logo--hidden {
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
+    -webkit-transform: translateY(-140%);
+            transform: translateY(-140%);
     -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
