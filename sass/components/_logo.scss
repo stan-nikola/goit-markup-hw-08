@@ -23,6 +23,7 @@ position: absolute;
     left: 15px;
     z-index: 5;
     opacity: 1;
+   pointer-events: initial;
     transform: translateX(0);
     transition: transform 250ms $transition-timing-function,
     opacity 250ms $transition-timing-function;
@@ -33,6 +34,7 @@ position: absolute;
 @media screen and (max-width:767px) {
     .logo--hidden {
         opacity: 0;
+        pointer-events: none;
             transform: translateX(100%);
         transition: transform 250ms $transition-timing-function,
         opacity 250ms $transition-timing-function ;

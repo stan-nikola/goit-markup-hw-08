@@ -57,7 +57,7 @@
     position: absolute;
     top: 12px;
     right: 23px;
-    z-index: 2;
+    z-index: 10;
     @include centered-flex($type: inline-flex);
     background-color: transparent;
     border: none;
@@ -71,6 +71,8 @@
     & .icon-cross {
         opacity: 0;
         transform: translateX(-100%);
+        transition: opacity 250ms $transition-timing-function,
+                transform 250ms $transition-timing-function;
     }
 
     &.is-open .icon-cross {
@@ -83,6 +85,8 @@
     &.is-open .icon-menu {
         opacity: 0;
         transform: translateX(100%);
+        transition: opacity 250ms $transition-timing-function,
+            transform 250ms $transition-timing-function;
     }
 
     .icon-menu {

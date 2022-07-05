@@ -19,17 +19,18 @@
 
 <body data-body>
   <header class="header">
-
     <div class="header__item">
-      <a class="logo logo--header" data-logo href="./index.html"> <span class="logo__accent">Web</span>Studio </a>
+      <a class="logo logo--header" data-logo href="./index.html">
+        <span class="logo__accent">Web</span>Studio
+      </a>
       <div class="burger-menu" id="burger-menu" data-menu>
         <nav class="nav">
           <ul class="nav__list">
-            <li class="nav__item  nav__item--current">
+            <li class="nav__item nav__item--current">
               <a class="header__link" href="./index.html"> Студия</a>
             </li>
             <li class="nav__item">
-              <a class="header__link " href="./portfolio.html"> Портфолио</a>
+              <a class="header__link" href="./portfolio.html"> Портфолио</a>
             </li>
             <li class="nav__item">
               <a class="header__link" href="">Контакты</a>
@@ -53,7 +54,7 @@
           </li>
         </ul>
         <ul class="social social--burger-menu">
-          <li class="social__item social__item--burger-menu ">
+          <li class="social__item social__item--burger-menu">
             <a class="social__link--burger-menu" aria-label="instagram" href="">
               <svg class="social__icon social__icon--burger-menu" width="20" height="20">
                 <use href="./images/icons.svg#icon-instagram"></use>
@@ -63,14 +64,14 @@
           </li>
           <li class="social__item social__item--burger-menu">
             <a class="social__link--burger-menu" aria-label="twitter" href="">
-              <svg class="social__icon social__icon--burger-menu " width="20" height="20">
+              <svg class="social__icon social__icon--burger-menu" width="20" height="20">
                 <use href="./images/icons.svg#icon-twitter"></use>
               </svg>
               <span class="social__name--burger-menu">twitter</span>
             </a>
           </li>
           <li class="social__item social__item--burger-menu">
-            <a class="social__link--burger-menu " aria-label="facebook" href="">
+            <a class="social__link--burger-menu" aria-label="facebook" href="">
               <svg class="social__icon social__icon--burger-menu" width="20" height="20">
                 <use href="./images/icons.svg#icon-facebook"></use>
               </svg>
@@ -94,7 +95,6 @@
           <use class="icon-cross" href="./images/icons.svg#icon-cross"></use>
         </svg>
       </button>
-
     </div>
   </header>
 
@@ -166,15 +166,58 @@
         <h2 class="work__title">Чем мы занимаемся</h2>
         <ul class="work__list">
           <li class="work__item">
-            <img class="work__img" src="./images/we-do/1.jpg" width="370" height="294" alt="Десктопные приложения" />
+            <picture>
+              <source srcset="
+                    ./images/work/work-1@1x.webp 1x,
+                    ./images/work/work-1@2x.webp 2x,
+                    ./images/work/work-1@3x.webp 3x
+                  " />
+              <source srcset="
+                    ./images/work/work-1@1x.jpg 1x,
+                    ./images/work/work-1@2x.jpg 2x,
+                    ./images/work/work-1@3x.jpg 3x
+                  " />
+
+              <img class="work__img" src="./images/work/work-1@1x.jpg" width="370" height="294"
+                alt="Десктопные приложения" loading="lazy" />
+            </picture>
+
             <p class="overlay__work">Десктопные приложения</p>
           </li>
           <li class="work__item">
-            <img class="work__img" src="./images/we-do/2.jpg" width="370" height="294" alt="Мобильные приложения" />
+            <picture>
+              <source srcset="
+                    ./images/work/work-2@1x.webp 1x,
+                    ./images/work/work-2@2x.webp 2x,
+                    ./images/work/work-2@3x.webp 3x
+                  " />
+              <source srcset="
+                    ./images/work/work-2@1x.jpg 1x,
+                    ./images/work/work-2@2x.jpg 2x,
+                    ./images/work/work-2@3x.jpg 3x
+                  " />
+              <img class="work__img" src="./images/work/work-2@1x.jpg" width="370" height="294"
+                alt="Мобильные приложения" loading="lazy" />
+            </picture>
+
             <p class="overlay__work">Мобильные приложения</p>
           </li>
           <li class="work__item">
-            <img class="work__img" src="./images/we-do/3.jpg" width="370" height="294" alt="Дизайнерские решения" />
+            <picture>
+              <source srcset="
+                    ./images/work/work-3@1x.webp 1x,
+                    ./images/work/work-3@2x.webp 2x,
+                    ./images/work/work-3@3x.webp 3x
+                  " />
+              <source srcset="
+                    ./images/work/work-3@1x.jpg 1x,
+                    ./images/work/work-3@2x.jpg 2x,
+                    ./images/work/work-3@3x.jpg 3x
+                  " />
+              <img class="work__img" src="./images/work/work-3@1x.jpg" width="370" height="294"
+                alt="Дизайнерские решения" loading="lazy" />
+            </picture>
+
             <p class="overlay__work">Дизайнерские решения</p>
           </li>
         </ul>
@@ -187,7 +230,20 @@
         <h2 class="team__title">Наша команда</h2>
         <ul class="team__list">
           <li class="team__item">
-            <img class="team__img" src="./images/our-team/1.jpg" width="270" alt="Игорь Демьяненко" />
+            <picture>
+              <source srcset="
+                    ./images/team/team-1@1x.webp 1x,
+                    ./images/team/team-1@2x.webp 2x,
+                    ./images/team/team-1@3x.webp 3x
+                  " />
+              <source srcset="
+                    ./images/team/team-1@1x.jpg 1x,
+                    ./images/team/team-1@2x.jpg 2x,
+                    ./images/team/team-1@3x.jpg 3x
+                  " />
+
+              <img class="team__img" src="./images/team/team-1@1x.jpg" width="270" alt="Игорь Демьяненко" />
+            </picture>
             <div class="team__meta">
               <h3 class="team__name">Игорь Демьяненко</h3>
               <p class="team__position">Product Designer</p>
@@ -209,7 +265,7 @@
                   </a>
                 </li>
                 <li class="social__item social__item--team">
-                  <a class="social__link social__link--team " aria-label="facebook" href="">
+                  <a class="social__link social__link--team" aria-label="facebook" href="">
                     <svg class="social__icon" width="20" height="20">
                       <use href="./images/icons.svg#icon-facebook"></use>
                     </svg>
@@ -228,7 +284,20 @@
             </div>
           </li>
           <li class="team__item">
-            <img class="team__img" src="./images/our-team/2.jpg" width="270" alt="Ольга Репина" />
+            <picture>
+              <source srcset="
+                    ./images/team/team-2@1x.webp 1x,
+                    ./images/team/team-2@2x.webp 2x,
+                    ./images/team/team-2@3x.webp 3x
+                  " />
+              <source srcset="
+                    ./images/team/team-2@1x.jpg 1x,
+                    ./images/team/team-2@2x.jpg 2x,
+                    ./images/team/team-2@3x.jpg 3x
+                  " />
+              <img class="team__img" src="./images/team/team-2@1x.jpg" width="270" alt="Ольга Репина" />
+            </picture>
+
             <div class="team__meta">
               <h3 class="team__name">Ольга Репина</h3>
               <p class="team__position">Frontend Developer</p>
@@ -269,7 +338,20 @@
             </div>
           </li>
           <li class="team__item">
-            <img class="team__img" src="./images/our-team/3.jpg" width="270" alt="Николай Тарасов" />
+            <picture>
+              <source srcset="
+                    ./images/team/team-3@1x.webp 1x,
+                    ./images/team/team-3@2x.webp 2x,
+                    ./images/team/team-3@3x.webp 3x
+                  " />
+              <source srcset="
+                    ./images/team/team-3@1x.jpg 1x,
+                    ./images/team/team-3@2x.jpg 2x,
+                    ./images/team/team-3@3x.jpg 3x
+                  " />
+              <img class="team__img" src="./images/team/team-3@1x.jpg" width="270" alt="Николай Тарасов" />
+            </picture>
+
             <div class="team__meta">
               <h3 class="team__name">Николай Тарасов</h3>
               <p class="team__position">Marketing</p>
@@ -310,7 +392,20 @@
             </div>
           </li>
           <li class="team__item">
-            <img class="team__img" src="./images/our-team/4.jpg" width="270" alt="Михаил Ермаков" />
+            <picture>
+              <source srcset="
+                    ./images/team/team-4@1x.webp 1x,
+                    ./images/team/team-4@2x.webp 2x,
+                    ./images/team/team-3@3x.webp 3x
+                  " />
+              <source srcset="
+                    ./images/team/team-4@1x.jpg 1x,
+                    ./images/team/team-4@2x.jpg 2x,
+                    ./images/team/team-4@3x.jpg 3x
+                  " />
+              <img class="team__img" src="./images/team/team-4@1x.jpg" width="270" alt="Михаил Ермаков" />
+            </picture>
+
             <div class="team__meta">
               <h3 class="team__name">Михаил Ермаков</h3>
               <p class="team__position">UI Designer</p>
@@ -410,9 +505,7 @@
     <div class="footer__item">
       <h2 class="footer__title">Contacts</h2>
       <div class="footer-contacts">
-        <a class="logo logo--footer" href="/">
-          <span class="logo__accent">Web</span>Studio
-        </a>
+        <a class="logo logo--footer" href="/"> <span class="logo__accent">Web</span>Studio </a>
         <address class="footer-contacts__adress">
           <ul class="footer-contacts__list">
             <li class="footer-contacts__item">
