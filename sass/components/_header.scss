@@ -1,23 +1,19 @@
 .header {
-
     border-bottom: 1px solid $header-border-color;
-
-
 }
 
 .header__item {
     @extend %container;
 
-    @media screen and  (max-width: 767px) {
+    @media screen and (max-width: 767px) {
         position: relative;
-        height: 60px;   
+        height: 60px;
     }
 
     @media screen and (min-width: $tablet) {
         display: flex;
         align-items: center;
         justify-content: space-between;
-
     }
 }
 
@@ -50,10 +46,6 @@
 }
 
 .burger-menu__btn {
-    @media screen and (min-width: $tablet) {
-        display: none;
-    }
-
     position: absolute;
     top: 12px;
     right: 23px;
@@ -72,7 +64,7 @@
         opacity: 0;
         transform: translateX(-100%);
         transition: opacity 250ms $transition-timing-function,
-                transform 250ms $transition-timing-function;
+            transform 250ms $transition-timing-function;
     }
 
     &.is-open .icon-cross {
@@ -103,6 +95,10 @@
         color: $accent-color;
     }
 
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+
 }
 
 .burger-menu__btn-icon {
@@ -110,12 +106,13 @@
 }
 
 .nav {
-    
+
     @media screen and (max-width: 767px) {
         margin-bottom: 302px;
+
         @media screen and (max-width: 479px) {
-                margin-bottom: 180px;
-            }
+            margin-bottom: 180px;
+        }
     }
 
     @media screen and (min-width: $tablet) {
@@ -176,8 +173,8 @@
 
     @media screen and (max-width: 767px) {
         @media screen and (max-width: 479px) {
-                font-size: 30px;
-            }
+            font-size: 30px;
+        }
         font-weight: 500;
         font-size: 40px;
         line-height: 1.18;
@@ -252,17 +249,19 @@
         color: $accent-color;
     }
 
-    @media screen  and (max-width: 767px) {
+    @media screen and (max-width: 767px) {
         @media screen and (max-width: 479px) {
-                font-size: 16px;
-            }
+            font-size: 16px;
+        }
+
         font-size: 24px;
         line-height: 1.16;
 
         &--burgger-menu-tel {
             @media screen and (max-width: 479px) {
-            font-size: 24px;
+                font-size: 24px;
             }
+
             font-size: 34px;
             line-height: 1.18;
             color: $accent-color;
@@ -282,10 +281,9 @@
 
 
 .contacts__icon {
-    @media screen and (max-width:767px) {
-        display: none;
-    }
-
     margin-right: 10px;
     fill: currentColor;
+    @media screen and (max-width:767px) {
+            display: none;
+        }
 }

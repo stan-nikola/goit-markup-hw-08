@@ -84,9 +84,10 @@
     @media screen and (max-width: 767px) {
         margin-bottom: 60px;
     }
-          @media screen and (min-width:$desctop) {
-              margin-right: auto;
-          }
+
+    @media screen and (min-width:$desctop) {
+        margin-right: auto;
+    }
 }
 
 .footer-subscribe {
@@ -95,16 +96,19 @@
         text-align: center;
         width: 450px;
     }
-    @media screen and (min-width:$desctop){
-        width:570px ;
+
+    @media screen and (min-width:$desctop) {
+        width: 570px;
     }
 }
-.footer-subscribe__form{
-    @media screen and (min-width:$desctop){
+
+.footer-subscribe__form {
+    @media screen and (min-width:$desctop) {
         display: flex;
     }
-          
+
 }
+
 .footer-subscribe__input {
     position: relative;
 
@@ -119,6 +123,7 @@
 
     }
 }
+
 .footer-subscribe__field {
     position: relative;
     width: 100%;
@@ -154,12 +159,10 @@
         opacity: 0;
     }
 
-    //  transition: opacity 100ms $transition-timing-function; 
+     transition: opacity 100ms $transition-timing-function; 
 }
 
 .footer-subscribe-btn {
-    // margin-left: 12px;
-
     @extend %button;
     @include centered-flex ($type: inline-flex);
     height: 50px;

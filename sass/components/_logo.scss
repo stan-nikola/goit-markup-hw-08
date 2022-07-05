@@ -1,52 +1,50 @@
 .logo {
-    @extend %link;
-    @media screen and (max-width:767px) {
-        display: block;
-        
-    }
-         @media screen and (max-width:1199px) {
-             font-size: 24px;
-             line-height: 1.16;
-         }
+  @extend %link;
 
-    font-family: $secondary-font;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
+  font-family: $secondary-font;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
 
-   
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+  @media screen and (max-width: 1199px) {
+    font-size: 24px;
+    line-height: 1.16;
+  }
 }
-.logo--header{
-    @media screen and (max-width:767px){
-position: absolute;
+
+.logo--header {
+  @media screen and (max-width: 767px) {
+    position: absolute;
     top: 16px;
     left: 15px;
     z-index: 5;
     opacity: 1;
-   pointer-events: initial;
+    pointer-events: initial;
     transform: translateX(0);
     transition: transform 250ms $transition-timing-function,
-    opacity 250ms $transition-timing-function;
-    }
-
+      opacity 250ms $transition-timing-function;
+  }
 }
 
-@media screen and (max-width:767px) {
-    .logo--hidden {
-        opacity: 0;
-        pointer-events: none;
-            transform: translateX(100%);
-        transition: transform 250ms $transition-timing-function,
-        opacity 250ms $transition-timing-function ;
-    }
+@media screen and (max-width: 767px) {
+  .logo--hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+    transition: transform 250ms $transition-timing-function,
+      opacity 250ms $transition-timing-function;
+  }
 }
 
 .logo__accent {
-    color: $accent-color;
+  color: $accent-color;
 }
 
 .logo--footer {
-    display: block;
-    color: $second-text-color;
-    margin-bottom: 20px;
+  display: block;
+  color: $second-text-color;
+  margin-bottom: 20px;
 }

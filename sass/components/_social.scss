@@ -1,106 +1,94 @@
 .social {
-    @extend %list;
-    
-    display: flex;
-    
-    justify-content: center;
-}
-.social--burger-menu{
-justify-content: flex-start;
-flex-wrap: wrap;
-    @media screen and (min-width:$tablet){
-        display: none;
-    }
- 
-}
+  @extend %list;
 
-.social__item--team{
-    &:not(:last-child) {
-            margin-right: 10px;
-        }
+  display: flex;
+  justify-content: center;
+}
+.social--burger-menu {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+.social__item--team {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
 }
 .social__item--burger-menu {
-    @media screen and (max-width:767px){
+  @media screen and (max-width: 767px) {
     display: flex;
-      
-    
-        &:not(:last-child) {
-            padding-right: 10px;
-        }
-    
-        &::after {
-            content: '';
-            width: 1px;
-            height: 100%;
-            background-color: rgba(33, 33, 33, 0.2);
-            ;
-            margin-left: 10px;
-        }
-    
-        &:last-child::after {
-            display: none;
-        }
+    &:not(:last-child) {
+      padding-right: 10px;
     }
-
+    &::after {
+      content: '';
+      width: 1px;
+      height: 100%;
+      background-color: rgba(33, 33, 33, 0.2);
+      margin-left: 10px;
+    }
+    &:last-child::after {
+      display: none;
+    }
+  }
 }
-
-    
-
 .social__link {
-    @include centered-flex();
-    width: 44px;
-    height: 44px;
-    border-radius: 50px;
-    transition: background-color 250ms $transition-timing-function,
-        color 250ms $transition-timing-function;
+  @include centered-flex();
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  transition: background-color 250ms $transition-timing-function,
+    color 250ms $transition-timing-function;
 }
-.social__link--burger-menu{
-    @extend %link;   
+.social__link--burger-menu {
+  @extend %link;
 }
 .social__name {
-    @extend %visually-hidden;
+  @extend %visually-hidden;
 }
-.social__name--burger-menu{
-    font-weight: 500;
-        font-size: 18px;
-        line-height: 1.22;
-        letter-spacing: 0.02em;
-        color: $accent-color;
-        text-transform: capitalize;
+.social__name--burger-menu {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: $accent-color;
+  text-transform: capitalize;
 }
 .social__link--team {
-    color: $primary-icon-fill;
+  color: $primary-icon-fill;
 
-    &:hover,
-    &:focus {
-        background-color: $accent-color;
-        color: $secondary-icon-fill;
-    }
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $secondary-icon-fill;
+  }
 }
 
 .social__list--footer {
-    display: flex;
+  display: flex;
 }
 
-.social__item--footer{
-    &:not(:last-child) {
-            margin-right: 10px;
-        }
+.social__item--footer {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
 }
 
 .social__link--footer {
-    background-color: $footer-icon-bg;
-    color: $secondary-icon-fill;
+  background-color: $footer-icon-bg;
+  color: $secondary-icon-fill;
 
-    &:hover,
-    &:focus {
-        background-color: $accent-color;
-    }
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
 }
 .social__icon {
-    fill: currentColor;
+  fill: currentColor;
 }
 
 .social__icon--burger-menu {
-    display: none;
+  display: none;
 }

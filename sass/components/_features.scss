@@ -1,7 +1,8 @@
 .features {
     @extend %section;
 }
-.contanier{
+
+.contanier {
     @extend %container;
 }
 
@@ -9,6 +10,7 @@
     @extend %visually-hidden;
 
 }
+
 .features__list {
     @extend %list;
 
@@ -23,6 +25,7 @@
     }
 
 }
+
 .features__item {
     &:not(:last-child) {
         @media screen and (max-width:767px) {
@@ -33,16 +36,16 @@
     @media screen and (min-width:$tablet) {
         width: calc((100% - 30px)/2);
 
-        @media screen and (max-width:1199px) {
-           
+        @media screen and (max-width:1199px) {}
+    }
+
+    @media screen and (min-width:$desctop) {
+        width: calc((100% - 30px*3)/4);
+
+        &:not(:last-child) {
+            margin-right: 30px;
         }
     }
-        @media screen and (min-width:$desctop) {
-            width: calc((100% - 30px*3)/4);
-            &:not(:last-child){
-                margin-right: 30px;
-            }
-        }
 
 }
 
