@@ -28,6 +28,10 @@ address {
   overflow: hidden;
 }
 
+.no-scroll--burger {
+  overflow: hidden;
+}
+
 .footer__item, y .container, .contanier, .container, .header__item {
   padding-left: 15px;
   padding-right: 15px;

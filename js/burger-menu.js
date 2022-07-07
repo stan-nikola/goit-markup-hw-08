@@ -3,7 +3,7 @@
   const menuBtnRef = document.querySelector("[data-menu-button]");
   const mobileMenuRef = document.querySelector("[data-menu]");
   const mobileLogoRef = document.querySelector("[data-logo]");
-  const mobileHeaderRef = document.querySelector("[data-body]");
+  const mobileBodyRef = document.querySelector("[data-body-burger]");
 
   menuBtnRef.addEventListener("click", () => {
     const expanded =
@@ -14,12 +14,12 @@
 
     mobileMenuRef.classList.toggle("is-open");
     mobileLogoRef.classList.toggle("logo--hidden");
-    mobileHeaderRef.classList.toggle("no-scroll");
+    mobileBodyRef.classList.toggle("no-scroll--burger");
 
     window.matchMedia('(min-width: 768px)').addEventListener('change', (e) => {
       if (!e.matches) return;
       mobileMenuRef.classList.remove('is-open');
-      mobileHeaderRef.classList.remove("no-scroll");
+      mobileBodyRef.classList.remove("no-scroll--burger");
       mobileLogoRef.classList.remove("logo--hidden");
 
       menuBtnRef.setAttribute('aria-expanded', false);
