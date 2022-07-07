@@ -136,17 +136,29 @@ address {
 
 @media screen and (max-width: 767px) {
   .burger-menu {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
+    overflow-y: scroll;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 100%;
+    height: 100%;
     background-color: #fff;
     padding: 48px 40px;
     -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
-    -webkit-transform: translateX(-130%);
-            transform: translateX(-130%);
+    -webkit-transform: translateX(-180%);
+            transform: translateX(-180%);
     -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -240,16 +252,6 @@ address {
   fill: currentColor;
 }
 
-@media screen and (max-width: 767px) {
-  .nav {
-    margin-bottom: 302px;
-  }
-}
-@media screen and (max-width: 767px) and (max-width: 479px) {
-  .nav {
-    margin-bottom: 180px;
-  }
-}
 @media screen and (min-width: 768px) {
   .nav {
     margin-right: 84px;
@@ -339,11 +341,6 @@ address {
   color: #2196f3;
 }
 
-@media screen and (max-width: 767px) {
-  .contacts {
-    margin-bottom: 64px;
-  }
-}
 @media screen and (min-width: 1200px) {
   .contacts {
     display: -webkit-box;
@@ -356,8 +353,11 @@ address {
 }
 
 @media screen and (max-width: 767px) {
-  .contacts__item:not(:last-child) {
+  .contacts__item:nth-child(-n+1) {
     margin-bottom: 32px;
+  }
+  .contacts__item:nth-child(2) {
+    margin-bottom: 64px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -368,6 +368,9 @@ address {
   }
   .contacts__item:not(:last-child) {
     margin-bottom: 10px;
+  }
+  .contacts__item:first-child {
+    padding-top: 16px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -515,58 +518,68 @@ address {
 
 .hero__overlay {
   margin: 0 auto;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4)));
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 @media screen and (max-width: 479px) {
   .hero__overlay {
+    max-width: 767px;
     height: 400px;
-    background-image: url("../images/hero/Hero-480@1x.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/Hero-480@1x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/Hero-480@1x.jpg");
   }
 }
 @media screen and (max-width: 479px) and (min-device-pixel-ratio: 2), screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 479px) and (min-resolution: 192dpi), screen and (max-width: 479px) and (min-resolution: 2dppx) {
   .hero__overlay {
-    background-image: url("../images/hero/Hero-480@2x.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/Hero-480@2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/Hero-480@2x.jpg");
   }
 }
 @media screen and (max-width: 479px) and (min-device-pixel-ratio: 3), screen and (max-width: 479px) and (-webkit-min-device-pixel-ratio: 3), screen and (max-width: 479px) and (min-resolution: 288dpi), screen and (max-width: 479px) and (min-resolution: 3dppx) {
   .hero__overlay {
-    background-image: url("../images/hero/Hero-480@3x.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/Hero-480@3x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/Hero-480@3x.jpg");
   }
 }
 @media screen and (min-width: 480px) and (max-width: 1199px) {
   .hero__overlay {
+    max-width: 1199px;
     height: 400px;
-    background-image: url("../images/hero/Hero-768@1x.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/Hero-768@1x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/Hero-768@1x.jpg");
   }
 }
 @media screen and (min-width: 480px) and (max-width: 1199px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (max-width: 1199px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (max-width: 1199px) and (min-resolution: 2dppx) {
   .hero__overlay {
-    background-image: url("../images/hero/Hero-768@2x.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/Hero-768@2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/Hero-768@2x.jpg");
   }
 }
 @media screen and (min-width: 480px) and (max-width: 1199px) and (min-device-pixel-ratio: 3), screen and (min-width: 480px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 480px) and (max-width: 1199px) and (min-resolution: 288dpi), screen and (min-width: 480px) and (max-width: 1199px) and (min-resolution: 3dppx) {
   .hero__overlay {
-    background-image: url("../images/hero/Hero-768@3x.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/Hero-768@3x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/Hero-768@3x.jpg");
   }
 }
 @media screen and (min-width: 1200px) {
   .hero__overlay {
+    max-width: 1600px;
     height: 600px;
-    background-image: url("../images/hero/Hero-1600@1x.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/Hero-1600@1x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/Hero-1600@1x.jpg");
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero__overlay {
-    background-image: url("../images/hero/Hero-1600@2x.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/Hero-1600@2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/Hero-1600@2x.jpg");
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 3), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 1200px) and (min-resolution: 288dpi), screen and (min-width: 1200px) and (min-resolution: 3dppx) {
   .hero__overlay {
-    background-image: url("../images/hero/Hero-1600@3x.jpg");
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/Hero-1600@3x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/Hero-1600@3x.jpg");
   }
 }
 
@@ -665,6 +678,11 @@ address {
   line-height: 1.14;
   text-transform: uppercase;
   margin-bottom: 10px;
+}
+@media screen and (max-width: 767px) {
+  .feature__name {
+    text-align: center;
+  }
 }
 
 .feature__text {
@@ -1017,6 +1035,9 @@ address {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 30px;
   }
 }
@@ -1059,6 +1080,20 @@ address {
 .project__thumb {
   position: relative;
   overflow: hidden;
+}
+
+.project__img {
+  height: 294px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .project__img {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .project__img {
+    width: 370px;
+  }
 }
 
 .project__overlay {

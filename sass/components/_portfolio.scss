@@ -74,6 +74,7 @@
     @media screen and (min-width:$tablet) {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         gap: 30px;
     }
 }
@@ -87,6 +88,7 @@
 
     @media screen and (min-width:$tablet) and (max-width: 1199px) {
         width: calc((100% - 30px)/2);
+       
     }
     @media screen and (min-width:$desctop){
         width: calc((100% - 30px*2)/3);
@@ -111,6 +113,16 @@
 .project__thumb {
     position: relative;
     overflow: hidden;
+}
+.project__img {
+    height: 294px;
+    @media screen and (min-width:$tablet) and (max-width:1199px) {
+        width: 354px;
+    }
+    @media screen and (min-width:$desctop) {
+        width: 370px;
+
+    }
 }
 
 .project__overlay {
