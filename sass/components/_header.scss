@@ -246,10 +246,11 @@ max-width: 480px;
     }
 
     @media screen and (min-width: $desctop) {
-        &:not(:last-child) {
-            margin-right: 50px;
-        }
+        &:nth-child(-n + 1) {
+                margin-right: 30px;
+            }
     }
+
 }
 
 .contacts__link {
