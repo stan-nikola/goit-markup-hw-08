@@ -18,9 +18,10 @@
 
     window.matchMedia('(min-width: 768px)').addEventListener('change', (e) => {
       if (!e.matches) return;
-      mobileMenuRef.classList.remove('is-open');
+      mobileMenuRef.classList.remove("is-open");
       mobileBodyRef.classList.remove("no-scroll--burger");
       mobileLogoRef.classList.remove("logo--hidden");
+      menuBtnRef.classList.remove("is-open");
 
       menuBtnRef.setAttribute('aria-expanded', false);
 
