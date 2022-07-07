@@ -3,7 +3,7 @@
   const menuBtnRef = document.querySelector("[data-menu-button]");
   const mobileMenuRef = document.querySelector("[data-menu]");
   const mobileLogoRef = document.querySelector("[data-logo]");
-  // const mobileHeaderRef = document.querySelector("[data-header");
+  const mobileHeaderRef = document.querySelector("[data-header");
 
   menuBtnRef.addEventListener("click", () => {
     const expanded =
@@ -14,6 +14,6 @@
 
     mobileMenuRef.classList.toggle("is-open");
     mobileLogoRef.classList.toggle("logo--hidden");
-    // mobileHeaderRef.classList.toggle("header__item--fixed");
+    mobileHeaderRef.classList.toggle("header__item--fixed");
   });
 })();

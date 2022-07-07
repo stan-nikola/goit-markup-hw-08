@@ -16,7 +16,7 @@
 
 <body>
   <header class="header">
-    <div class="header__item">
+    <div class="header__item" data-header>
       <a class="logo logo--header" data-logo href="./index.html"> <span class="logo__accent">Web</span>Studio </a>
       <div class="burger-menu" id="burger-menu" data-menu>
         <nav class="nav">
@@ -47,41 +47,42 @@
               </svg>
               +38 096 111 11 11</a>
           </li>
+          <ul class="social social--burger-menu">
+            <li class="social__item social__item--burger-menu ">
+              <a class="social__link--burger-menu" aria-label="instagram" href="">
+                <svg class="social__icon social__icon--burger-menu" width="20" height="20">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+                <span class="social__name--burger-menu">instagram</span>
+              </a>
+            </li>
+            <li class="social__item social__item--burger-menu">
+              <a class="social__link--burger-menu" aria-label="twitter" href="">
+                <svg class="social__icon social__icon--burger-menu " width="20" height="20">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+                <span class="social__name--burger-menu">twitter</span>
+              </a>
+            </li>
+            <li class="social__item social__item--burger-menu">
+              <a class="social__link--burger-menu " aria-label="facebook" href="">
+                <svg class="social__icon social__icon--burger-menu" width="20" height="20">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+                <span class="social__name--burger-menu">facebook</span>
+              </a>
+            </li>
+            <li class="social__item social__item--burger-menu">
+              <a class="social__link--burger-menu" aria-label="linkedin" href="">
+                <svg class="social__icon social__icon--burger-menu" width="20" height="20">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+                <span class="social__name--burger-menu">linkedin</span>
+              </a>
+            </li>
+          </ul>
         </ul>
-        <ul class="social social--burger-menu">
-          <li class="social__item social__item--burger-menu ">
-            <a class="social__link--burger-menu" aria-label="instagram" href="">
-              <svg class="social__icon social__icon--burger-menu" width="20" height="20">
-                <use href="./images/icons.svg#icon-instagram"></use>
-              </svg>
-              <span class="social__name--burger-menu">instagram</span>
-            </a>
-          </li>
-          <li class="social__item social__item--burger-menu">
-            <a class="social__link--burger-menu" aria-label="twitter" href="">
-              <svg class="social__icon social__icon--burger-menu " width="20" height="20">
-                <use href="./images/icons.svg#icon-twitter"></use>
-              </svg>
-              <span class="social__name--burger-menu">twitter</span>
-            </a>
-          </li>
-          <li class="social__item social__item--burger-menu">
-            <a class="social__link--burger-menu " aria-label="facebook" href="">
-              <svg class="social__icon social__icon--burger-menu" width="20" height="20">
-                <use href="./images/icons.svg#icon-facebook"></use>
-              </svg>
-              <span class="social__name--burger-menu">facebook</span>
-            </a>
-          </li>
-          <li class="social__item social__item--burger-menu">
-            <a class="social__link--burger-menu" aria-label="linkedin" href="">
-              <svg class="social__icon social__icon--burger-menu" width="20" height="20">
-                <use href="./images/icons.svg#icon-linkedin"></use>
-              </svg>
-              <span class="social__name--burger-menu">linkedin</span>
-            </a>
-          </li>
-        </ul>
+
       </div>
       <button class="burger-menu__btn" data-menu-button type="button">
         <svg class="burger-menu__btn-icon" width="24" height="16" aria-label="mobile menu switch"

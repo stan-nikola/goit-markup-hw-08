@@ -115,12 +115,14 @@
     overflow: hidden;
 }
 .project__img {
-    height: 294px;
+    max-width: 450px;
     @media screen and (min-width:$tablet) and (max-width:1199px) {
-        width: 354px;
+        max-width: 354px;
+        height: 294px;
     }
     @media screen and (min-width:$desctop) {
-        width: 370px;
+        max-width: 370px;
+        height: 294px;
 
     }
 }
