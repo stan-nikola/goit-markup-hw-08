@@ -8,7 +8,7 @@
   menuBtnRef.addEventListener("click", () => {
     const expanded =
       menuBtnRef.getAttribute("aria-expanded") === "true" || false;
-    
+
     menuBtnRef.classList.toggle("is-open");
     menuBtnRef.setAttribute("aria-expanded", !expanded);
 
@@ -17,15 +17,15 @@
     mobileHeaderRef.classList.toggle("no-scroll");
 
     window.matchMedia('(min-width: 768px)').addEventListener('change', (e) => {
-		if (!e.matches) return;
+      if (!e.matches) return;
       mobileMenuRef.classList.remove('is-open');
       mobileHeaderRef.classList.remove("no-scroll");
       mobileLogoRef.classList.remove("logo--hidden");
-      
-		menuBtnRef.setAttribute('aria-expanded', false);
-	
-	});
 
-    
+      menuBtnRef.setAttribute('aria-expanded', false);
+
+    });
+
+
   });
 })();
