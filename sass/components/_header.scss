@@ -23,7 +23,7 @@
     @media screen and (max-width: 767px) {
         position: fixed;
         top: 0;
-        left:0;
+        left:50%;
         z-index: 1;
         overflow-y: scroll;
         display: flex;
@@ -42,7 +42,10 @@
 
         &.is-open {
             opacity: 1;
-            transform: translateX(0);
+            transform: translateX(-50%);
+            max-width: 480px;
+            
+          
         }
     }
 
@@ -50,6 +53,7 @@
         display: flex;
         align-items: center;
     }
+
 
 }
 
@@ -94,11 +98,8 @@
         transform: translateX(0);
         transition: opacity 250ms $transition-timing-function,
             transform 250ms $transition-timing-function;
-      
-
     }
-
-
+       
     &:hover,
     &:focus-visible {
         color: $accent-color;
@@ -115,14 +116,6 @@
 }
 
 .nav {
-
-    // @media screen and (max-width: 767px) {
-    //     margin-bottom: 302px;
-
-    //     @media screen and (max-width: 479px) {
-    //         margin-bottom: 180px;
-    //     }
-    // }
 
     @media screen and (min-width: $tablet) {
         margin-right: 84px;
