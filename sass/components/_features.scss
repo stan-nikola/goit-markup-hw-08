@@ -39,7 +39,7 @@
         @media screen and (max-width:1199px) {}
     }
 
-    @media screen and (min-width:$desctop) {
+    @media screen and (min-width:$desktop) {
         width: calc((100% - 30px*3)/4);
 
         &:not(:last-child) {

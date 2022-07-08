@@ -24,7 +24,7 @@
         margin-bottom: 30px;
     }
 
-    @media screen and (min-width:$desctop) {
+    @media screen and (min-width:$desktop) {
         margin-bottom: 50px;
     }
 
@@ -90,7 +90,7 @@
         width: calc((100% - 30px)/2);
        
     }
-    @media screen and (min-width:$desctop){
+    @media screen and (min-width:$desktop){
         width: calc((100% - 30px*2)/3);
 
     }
@@ -120,7 +120,7 @@
         max-width: 354px;
         height: 294px;
     }
-    @media screen and (min-width:$desctop) {
+    @media screen and (min-width:$desktop) {
         max-width: 370px;
         height: 294px;
 

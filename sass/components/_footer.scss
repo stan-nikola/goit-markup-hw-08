@@ -37,7 +37,7 @@
         margin-right: auto;
     }
 
-    @media screen and (min-width:$desctop) {
+    @media screen and (min-width:$desktop) {
         margin-right: 70px;
     }
 
@@ -85,7 +85,7 @@
         margin-bottom: 60px;
     }
 
-    @media screen and (min-width:$desctop) {
+    @media screen and (min-width:$desktop) {
         margin-right: auto;
     }
 }
@@ -97,13 +97,13 @@
         width: 450px;
     }
 
-    @media screen and (min-width:$desctop) {
+    @media screen and (min-width:$desktop) {
         width: 570px;
     }
 }
 
 .footer-subscribe__form {
-    @media screen and (min-width:$desctop) {
+    @media screen and (min-width:$desktop) {
         display: flex;
     }
 
@@ -117,7 +117,7 @@
         width: 100%;
     }
 
-    @media screen and (min-width:$desctop) {
+    @media screen and (min-width:$desktop) {
         width: 100%;
         margin-right: 12px;
 

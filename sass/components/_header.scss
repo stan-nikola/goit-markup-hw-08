@@ -120,7 +120,7 @@
         margin-right: 84px;
     }
 
-    @media screen and (min-width: $desctop) {
+    @media screen and (min-width: $desktop) {
         margin-right: 305px;
     }
 }
@@ -203,7 +203,7 @@
 .contacts {
     @extend %list;
 
-    @media screen and (min-width: $desctop) {
+    @media screen and (min-width: $desktop) {
         display: flex;
         align-items: center;
     }
@@ -230,7 +230,7 @@
                  }
     }
 
-    @media screen and (min-width: $desctop) {
+    @media screen and (min-width: $desktop) {
         &:nth-child(-n + 1) {
                 margin-right: 30px;
             }
@@ -278,7 +278,7 @@
        
     }
 
-    @media screen and (min-width: $desctop) {
+    @media screen and (min-width: $desktop) {
         display: inline-flex;
         align-items: center;
         padding: 32px 0 31px 0;

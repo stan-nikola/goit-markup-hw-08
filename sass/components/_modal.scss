@@ -15,10 +15,10 @@
         transform: translateX(-50%) scale(1.1);
     }
 
-    @media screen and (max-width:1199px) {
-        top: 208px;
 
-        @media screen and (max-width:767px) {
+       
+
+        @media screen and (max-width:1199px) {
             top: 93px;
 
             @media screen and (max-width:479px) {
@@ -27,14 +27,14 @@
                 width: calc(100% - 15px*2);
             }
         }
-    }
+    
 
     @media screen and (min-width:$mobile) and (max-width: 1199px) {
         width: 450px;
         height: 609px;
     }
 
-    @media screen and (min-width:$desctop) {
+    @media screen and (min-width:$desktop) {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%) scale(1);

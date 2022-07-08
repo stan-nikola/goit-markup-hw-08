@@ -27,26 +27,27 @@
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item nav__item--current">
-              <a class="header__link" href="./index.html"> Студия</a>
+              <a class="header__link" href="./index.html" aria-label="studio"> Студия</a>
             </li>
             <li class="nav__item">
-              <a class="header__link" href="./portfolio.html"> Портфолио</a>
+              <a class="header__link" href="./portfolio.html" aria-label="portfolio"> Портфолио</a>
             </li>
             <li class="nav__item">
-              <a class="header__link" href="">Контакты</a>
+              <a class="header__link" href="" aria-label="contacts">Контакты</a>
             </li>
           </ul>
         </nav>
         <ul class="contacts">
           <li class="contacts__item">
-            <a class="contacts__link contacts__link--burgger-menu-tel" href="mailto:info@devstudio.com">
+            <a class="contacts__link contacts__link--burgger-menu-tel" href="mailto:info@devstudio.com"
+              aria-label="mail">
               <svg class="contacts__icon" width="16" height="12">
                 <use href="./images/icons.svg#icon-mail"></use>
               </svg>
               info@devstudio.com</a>
           </li>
           <li class="contacts__item">
-            <a class="contacts__link" href="tel:+380961111111">
+            <a class="contacts__link" href="tel:+380961111111" aria-label="tel">
               <svg class="contacts__icon" width="10" height="16">
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
@@ -87,9 +88,8 @@
             </li>
           </ul>
         </ul>
-
       </div>
-      <button class="burger-menu__btn" data-menu-button type="button">
+      <button class="burger-menu__btn" data-menu-button type="button" aria-label="mobile munu button">
         <svg class="burger-menu__btn-icon" width="24" height="16" aria-label="mobile menu switch"
           aria-controls="burger-menu">
           <use class="icon-menu" href="./images/icons.svg#icon-burger"></use>
@@ -104,7 +104,7 @@
     <section class="hero hero__overlay">
       <div class="container">
         <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
-        <button class="hero__btn" data-modal-open type="button">Заказать услугу</button>
+        <button class="hero__btn" data-modal-open type="button" aria-label="order services">Заказать услугу</button>
       </div>
     </section>
 
@@ -169,17 +169,17 @@
           <li class="work__item">
             <picture>
               <source srcset="
-                    ./images/work/work-1@1x.webp 1x,
-                    ./images/work/work-1@2x.webp 2x,
-                    ./images/work/work-1@3x.webp 3x
-                  " type="image/webp" />
+                    ./images/desktop/work/work-1-desktop@1x.webp 1x,
+                    ./images/desktop/work/work-1-desktop@2x.webp 2x,
+                    ./images/desktop/work/work-1-desktop@3x.webp 3x
+                  " type="image/webp" media="(min-width: 1200px)" />
               <source srcset="
-                    ./images/work/work-1@1x.jpg 1x,
-                    ./images/work/work-1@2x.jpg 2x,
-                    ./images/work/work-1@3x.jpg 3x
-                  " type="image/jpg" />
+                    ./images/desktop/work/work-1-desktop@1x.jpg 1x,
+                    ./images/desktop/work/work-1-desktop@2x.jpg 2x,
+                    ./images/desktop/work/work-1-desktop@3x.jpg 3x
+                  " type="image/jpg" media="(min-width: 1200px)" />
 
-              <img class="work__img" src="./images/work/work-1@1x.jpg" width="370" height="294"
+              <img class="work__img" src="./images/desktop/work/work-1-desktop@1x.jpg" width="370" height="294"
                 alt="Десктопные приложения" loading="lazy" />
             </picture>
 
@@ -188,16 +188,16 @@
           <li class="work__item">
             <picture>
               <source srcset="
-                    ./images/work/work-2@1x.webp 1x,
-                    ./images/work/work-2@2x.webp 2x,
-                    ./images/work/work-2@3x.webp 3x
-                  " type="image/webp" />
+                    ./images/desktop/work/work-2-desktop@1x.webp 1x,
+                    ./images/desktop/work/work-2-desktop@2x.webp 2x,
+                    ./images/desktop/work/work-2-desktop@3x.webp 3x
+                  " type="image/webp" media="(min-width: 1200px)" />
               <source srcset="
-                    ./images/work/work-2@1x.jpg 1x,
-                    ./images/work/work-2@2x.jpg 2x,
-                    ./images/work/work-2@3x.jpg 3x
-                  " type="image/jpg" />
-              <img class="work__img" src="./images/work/work-2@1x.jpg" width="370" height="294"
+                    ./images/desktop/work/work-2-desktop@1x.jpg   1x,
+                    ../images/desktop/work//work-2-desktop@2x.jpg 2x,
+                    ./images/desktop/work/work-2-desktop@3x.jpg   3x
+                  " type="image/jpg" media="(min-width: 1200px)" />
+              <img class="work__img" src="./images/desktop/work/work-2-desktop@1x.jpg" width="370" height="294"
                 alt="Мобильные приложения" loading="lazy" />
             </picture>
 
@@ -206,16 +206,16 @@
           <li class="work__item">
             <picture>
               <source srcset="
-                    ./images/work/work-3@1x.webp 1x,
-                    ./images/work/work-3@2x.webp 2x,
-                    ./images/work/work-3@3x.webp 3x
-                  " type="image/webp" />
+                    ./images/desktop/work/work-3-desktop@1x.webp 1x,
+                    ./images/desktop/work/work-3-desktop@2x.webp 2x,
+                    ./images/desktop/work/work-3-desktop@3x.webp 3x
+                  " type="image/webp" media="(min-width: 1200px)" />
               <source srcset="
-                    ./images/work/work-3@1x.jpg 1x,
-                    ./images/work/work-3@2x.jpg 2x,
-                    ./images/work/work-3@3x.jpg 3x
-                  " type="image/jpg" />
-              <img class="work__img" src="./images/work/work-3@1x.jpg" width="370" height="294"
+                    ./images/desktop/work/work-3-desktop@1x.jpg 1x,
+                    ./images/desktop/work/work-3-desktop@2x.jpg 2x,
+                    ./images/desktop/work/work-3-desktop@3x.jpg 3x
+                  " type="image/jpg" media="(min-width: 1200px)" />
+              <img class="work__img" src="./images/desktop/work/work-3-desktop@1x.jpg" width="370" height="294"
                 alt="Дизайнерские решения" loading="lazy" />
             </picture>
 
@@ -233,17 +233,39 @@
           <li class="team__item">
             <picture>
               <source srcset="
-                    ./images/team/team-1@1x.webp 1x,
-                    ./images/team/team-1@2x.webp 2x,
-                    ./images/team/team-1@3x.webp 3x
-                  " type="image/webp" />
+                    ./images/mobile/team/team-1-mobile@1x.webp 1x,
+                    ./images/mobile/team/team-1-mobile@2x.webp 2x,
+                    ./images/mobile/team/team-1-mobile@3x.webp 3x
+                  " type="image/webp" media="(max-width: 767px)" />
               <source srcset="
-                    ./images/team/team-1@1x.jpg 1x,
-                    ./images/team/team-1@2x.jpg 2x,
-                    ./images/team/team-1@3x.jpg 3x
-                  " type="image/jpg" />
+                    ./images/tablet/team/team-1-tablet@1x.webp 1x,
+                    ./images/tablet/team/team-1-tablet@2x.webp 2x,
+                    ./images/tablet/team/team-1-tablet@3x.webp 3x
+                  " type="image/webp" media="(max-width: 1199px)" />
+              <source srcset="
+                    ./images/desktop/team/team-1-desktop@1x.webp 1x,
+                    ./images/desktop/team/team-1-desktop@2x.webp 2x,
+                    ./images/desktop/team/team-1-desktop@3x.webp 3x
+                  " type="image/webp" media="(min-width: 1200px)" />
+              <source srcset="
+                    ./images/mobile/team/team-1-mobile@1x.jpg 1x,
+                    ./images/mobile/team/team-1-mobile@2x.jpg 2x,
+                    ./images/mobile/team/team-1-mobile@3x.jpg 3x
+                  " type="image/jpg" media="(max-width: 767px)" />
+              <source srcset="
+                    ./images/tablet/team/team-1-tablet@1x.jpg 1x,
+                    ./images/tablet/team/team-1-tablet@2x.jpg 2x,
+                    ./images/tablet/team/team-1-tablet@3x.jpg 3x
+                  " type="image/jpg" media="(max-width: 1199px)" />
 
-              <img class="team__img" src="./images/team/team-1@1x.jpg" width="270" alt="Игорь Демьяненко" />
+              <source srcset="
+                    ./images/desktop/team/team-1-desktop@1x.jpg 1x,
+                    ./images/desktop/team/team-1-desktop@2x.jpg 2x,
+                    ./images/desktop/team/team-1-desktop@3x.jpg 3x
+                  " type="image/jpg" media="(min-width: 1200px)" />
+
+              <img class="team__img" src="./images/mobile/team/team-1-mobile@1x.jpg" width="270" height="294"
+                alt="Игорь Демьяненко" />
             </picture>
             <div class="team__meta">
               <h3 class="team__name">Игорь Демьяненко</h3>
@@ -287,16 +309,38 @@
           <li class="team__item">
             <picture>
               <source srcset="
-                    ./images/team/team-2@1x.webp 1x,
-                    ./images/team/team-2@2x.webp 2x,
-                    ./images/team/team-2@3x.webp 3x
-                  " type="image/webp" />
+                                ./images/mobile/team/team-2-mobile@1x.webp 1x,
+                                ./images/mobile/team/team-2-mobile@2x.webp 2x,
+                                ./images/mobile/team/team-2-mobile@3x.webp 3x
+                              " type="image/webp" media="(max-width: 767px)" />
               <source srcset="
-                    ./images/team/team-2@1x.jpg 1x,
-                    ./images/team/team-2@2x.jpg 2x,
-                    ./images/team/team-2@3x.jpg 3x
-                  " type="image/jpg" />
-              <img class="team__img" src="./images/team/team-2@1x.jpg" width="270" alt="Ольга Репина" />
+                                ./images/tablet/team/team-2-tablet@1x.webp 1x,
+                                ./images/tablet/team/team-2-tablet@2x.webp 2x,
+                                ./images/tablet/team/team-2-tablet@3x.webp 3x
+                              " type="image/webp" media="(max-width: 1199px)" />
+              <source srcset="
+                                ./images/desktop/team/team-2-desktop@1x.webp 1x,
+                                ./images/desktop/team/team-2-desktop@2x.webp 2x,
+                                ./images/desktop/team/team-2-desktop@3x.webp 3x
+                              " type="image/webp" media="(min-width: 1200px)" />
+              <source srcset="
+                                ./images/mobile/team/team-2-mobile@1x.jpg 1x,
+                                ./images/mobile/team/team-2-mobile@2x.jpg 2x,
+                                ./images/mobile/team/team-2-mobile@3x.jpg 3x
+                              " type="image/jpg" media="(max-width: 767px)" />
+              <source srcset="
+                                ./images/tablet/team/team-2-tablet@1x.jpg 1x,
+                                ./images/tablet/team/team-2-tablet@2x.jpg 2x,
+                                ./images/tablet/team/team-2-tablet@3x.jpg 3x
+                              " type="image/jpg" media="(max-width: 1199px)" />
+
+              <source srcset="
+                                ./images/desktop/team/team-2-desktop@1x.jpg 1x,
+                                ./images/desktop/team/team-2-desktop@2x.jpg 2x,
+                                ./images/desktop/team/team-2-desktop@3x.jpg 3x
+                              " type="image/jpg" media="(min-width: 1200px)" />
+              <img class="team__img" src="./images/mobile/team/team-2-mobile@1x.jpg" width="270" height="294"
+                alt="Ольга Репина" />
             </picture>
 
             <div class="team__meta">
@@ -341,16 +385,38 @@
           <li class="team__item">
             <picture>
               <source srcset="
-                    ./images/team/team-3@1x.webp 1x,
-                    ./images/team/team-3@2x.webp 2x,
-                    ./images/team/team-3@3x.webp 3x
-                  " type="image/webp" />
+                                  ./images/mobile/team/team-3-mobile@1x.webp 1x,
+                                  ./images/mobile/team/team-3-mobile@2x.webp 2x,
+                                  ./images/mobile/team/team-3-mobile@3x.webp 3x
+                                " type="image/webp" media="(max-width: 767px)" />
               <source srcset="
-                    ./images/team/team-3@1x.jpg 1x,
-                    ./images/team/team-3@2x.jpg 2x,
-                    ./images/team/team-3@3x.jpg 3x
-                  " type="image/jpg" />
-              <img class="team__img" src="./images/team/team-3@1x.jpg" width="270" alt="Николай Тарасов" />
+                                  ./images/tablet/team/team-3-tablet@1x.webp 1x,
+                                  ./images/tablet/team/team-3-tablet@2x.webp 2x,
+                                  ./images/tablet/team/team-3-tablet@3x.webp 3x
+                                " type="image/webp" media="(max-width: 1199px)" />
+              <source srcset="
+                                  ./images/desktop/team/team-3-desktop@1x.webp 1x,
+                                  ./images/desktop/team/team-3-desktop@2x.webp 2x,
+                                  ./images/desktop/team/team-3-desktop@3x.webp 3x
+                                " type="image/webp" media="(min-width: 1200px)" />
+              <source srcset="
+                                  ./images/mobile/team/team-3-mobile@1x.jpg 1x,
+                                  ./images/mobile/team/team-3-mobile@2x.jpg 2x,
+                                  ./images/mobile/team/team-3-mobile@3x.jpg 3x
+                                " type="image/jpg" media="(max-width: 767px)" />
+              <source srcset="
+                                  ./images/tablet/team/team-3-tablet@1x.jpg 1x,
+                                  ./images/tablet/team/team-3-tablet@2x.jpg 2x,
+                                  ./images/tablet/team/team-3-tablet@3x.jpg 3x
+                                " type="image/jpg" media="(max-width: 1199px)" />
+
+              <source srcset="
+                                  ./images/desktop/team/team-3-desktop@1x.jpg 1x,
+                                  ./images/desktop/team/team-3-desktop@2x.jpg 2x,
+                                  ./images/desktop/team/team-3-desktop@3x.jpg 3x
+                                " type="image/jpg" media="(min-width: 1200px)" />
+              <img class="team__img" src="./images/mobile/team/team-3-mobile@1x.jpg" width="270" height="294"
+                alt="Николай Тарасов" />
             </picture>
 
             <div class="team__meta">
@@ -395,16 +461,38 @@
           <li class="team__item">
             <picture>
               <source srcset="
-                    ./images/team/team-4@1x.webp 1x,
-                    ./images/team/team-4@2x.webp 2x,
-                    ./images/team/team-4@3x.webp 3x
-                  " type="image/webp" />
+                                  ./images/mobile/team/team-4-mobile@1x.webp 1x,
+                                  ./images/mobile/team/team-4-mobile@2x.webp 2x,
+                                  ./images/mobile/team/team-4-mobile@3x.webp 3x
+                                " type="image/webp" media="(max-width: 767px)" />
               <source srcset="
-                    ./images/team/team-4@1x.jpg 1x,
-                    ./images/team/team-4@2x.jpg 2x,
-                    ./images/team/team-4@3x.jpg 3x
-                  " type="image/jpg" />
-              <img class="team__img" src="./images/team/team-4@1x.jpg" width="270" alt="Михаил Ермаков" />
+                                  ./images/tablet/team/team-4-tablet@1x.webp 1x,
+                                  ./images/tablet/team/team-4-tablet@2x.webp 2x,
+                                  ./images/tablet/team/team-4-tablet@3x.webp 3x
+                                " type="image/webp" media="(max-width: 1199px)" />
+              <source srcset="
+                                  ./images/desktop/team/team-4-desktop@1x.webp 1x,
+                                  ./images/desktop/team/team-4-desktop@2x.webp 2x,
+                                  ./images/desktop/team/team-4-desktop@3x.webp 3x
+                                " type="image/webp" media="(min-width: 1200px)" />
+              <source srcset="
+                                  ./images/mobile/team/team-4-mobile@1x.jpg 1x,
+                                  ./images/mobile/team/team-4-mobile@2x.jpg 2x,
+                                  ./images/mobile/team/team-4-mobile@3x.jpg 3x
+                                " type="image/jpg" media="(max-width: 767px)" />
+              <source srcset="
+                                  ./images/tablet/team/team-4-tablet@1x.jpg 1x,
+                                  ./images/tablet/team/team-4-tablet@2x.jpg 2x,
+                                  ./images/tablet/team/team-4-tablet@3x.jpg 3x
+                                " type="image/jpg" media="(max-width: 1199px)" />
+
+              <source srcset="
+                                  ./images/desktop/team/team-4-desktop@1x.jpg 1x,
+                                  ./images/desktop/team/team-4-desktop@2x.jpg 2x,
+                                  ./images/desktop/team/team-4-desktop@3x.jpg 3x
+                                " type="image/jpg" media="(min-width: 1200px)" />
+              <img class="team__img" src="./images/mobile/team/team-4-mobile@1x.jpg" width="270" height="294"
+                alt="Михаил Ермаков" />
             </picture>
 
             <div class="team__meta">
@@ -456,42 +544,42 @@
         <h2 class="client__title">Постоянные клиенты</h2>
         <ul class="client__list">
           <li class="client__item">
-            <a class="client__link" href="">
+            <a class="client__link" href="" aria-label="client-1">
               <svg class="client__icon" width="106" height="60">
                 <use href="./images/icons.svg#icon-group-1"></use>
               </svg>
             </a>
           </li>
           <li class="client__item">
-            <a class="client__link" href="">
+            <a class="client__link" href="" aria-label="client-2">
               <svg class="client__icon" width="106" height="60">
                 <use href="./images/icons.svg#icon-group-2"></use>
               </svg>
             </a>
           </li>
           <li class="client__item">
-            <a class="client__link" href="">
+            <a class="client__link" href="" aria-label="client-3">
               <svg class="client__icon" width="106" height="60">
                 <use href="./images/icons.svg#icon-group-3"></use>
               </svg>
             </a>
           </li>
           <li class="client__item">
-            <a class="client__link" href="">
+            <a class="client__link" href="" aria-label="client-4">
               <svg class="client__icon" width="106" height="60">
                 <use href="./images/icons.svg#icon-group-4"></use>
               </svg>
             </a>
           </li>
           <li class="client__item">
-            <a class="client__link" href="">
+            <a class="client__link" href="" aria-label="client-5">
               <svg class="client__icon" width="106" height="60">
                 <use href="./images/icons.svg#icon-group-5"></use>
               </svg>
             </a>
           </li>
           <li class="client__item">
-            <a class="client__link" href="">
+            <a class="client__link" href="" aria-label="client-6">
               <svg class="client__icon" width="106" height="60">
                 <use href="./images/icons.svg#icon-group-6"></use>
               </svg>
@@ -510,15 +598,15 @@
         <address class="footer-contacts__adress">
           <ul class="footer-contacts__list">
             <li class="footer-contacts__item">
-              <a class="footer-contacts__link footer-contacts__link--building"
+              <a class="footer-contacts__link footer-contacts__link--building" aria-label="building"
                 href="https://goo.gl/maps/JCj7jRZ64n47ZgnA9" target="_blank" rel="nofollow noopener noreferrer">г. Киев,
                 пр-т Леси Украинки, 26</a>
             </li>
             <li class="footer-contacts__item">
-              <a class="footer-contacts__link" href="mailto:info@example.com">info@example.com</a>
+              <a class="footer-contacts__link" href="mailto:info@example.com" aria-label="mail">info@example.com</a>
             </li>
             <li class="footer-contacts__item">
-              <a class="footer-contacts__link" href="tel:+380961111111">+38 096 111 11 11</a>
+              <a class="footer-contacts__link" href="tel:+380961111111" aria-label="tel">+38 096 111 11 11</a>
             </li>
           </ul>
         </address>
@@ -556,7 +644,7 @@
                 <use href="./images/icons.svg#icon-linkedin"></use>
               </svg>
               <span class="social__name">linkedin</span>
-            </a>
+            </a>c
           </li>
         </ul>
       </div>
@@ -564,10 +652,11 @@
         <p class="footer__subtitle">Подпишитесь на рассылку</p>
         <form class="footer-subscribe__form" autocomplete="off">
           <div class="footer-subscribe__input">
-            <input class="footer-subscribe__field" type="email" name="subscribe" placeholder=" " required />
+            <input class="footer-subscribe__field" type="email" aria-label="enter your email" name="subscribe"
+              placeholder=" " required />
             <span class="footer-subscribe__placeholder">E-mail</span>
           </div>
-          <button class="footer-subscribe-btn" type="submit">
+          <button class="footer-subscribe-btn" aria-label="subscribe button" type="submit">
             <span class="footer-subscribe-btn__text">Подписаться</span>
             <svg width="24" height="24">
               <use href="./images/icons.svg#icon-icon-send"></use>
@@ -581,7 +670,7 @@
   <!-- backdrop -->
   <div class="backdrop is-hidden" data-modal>
     <div class="modal" role="group">
-      <button class="modal__btn--close" type="button" data-modal-close>
+      <button class="modal__btn--close" type="button" aria-label="order services close form" data-modal-close>
         <svg width="11" height="11">
           <use href="./images/icons.svg#icon-cross"></use>
         </svg>
@@ -591,7 +680,7 @@
         <label class="label">
           <span class="label__text">Имя</span>
           <span class="label__thumb">
-            <input class="label__imput" name="user-name" type="text" autofocus required />
+            <input class="label__imput" name="user-name" type="text" aria-label="enter user name" autofocus required />
             <svg class="label__icon" width="18" height="18">
               <use href="./images/icons.svg#icon-person"></use>
             </svg>
@@ -601,7 +690,7 @@
         <label class="label">
           <span class="label__text">Телефон</span>
           <span class="label__thumb">
-            <input class="label__imput" name="user-tel" type="tel" required />
+            <input class="label__imput" name="user-tel" type="tel" aria-label="enter yor tel number" required />
             <svg class="label__icon" width="18" height="18">
               <use href="./images/icons.svg#icon-phone"></use>
             </svg>
@@ -611,7 +700,7 @@
         <label class="label">
           <span class="label__text">Почта</span>
           <span class="label__thumb">
-            <input class="label__imput" name="user-email" type="email" required />
+            <input class="label__imput" name="user-email" type="email" aria-label="enter your email" required />
             <svg class="label__icon" width="18" height="18">
               <use href="./images/icons.svg#icon-email"></use>
             </svg>
@@ -627,13 +716,13 @@
         </label>
 
         <label class="checkbox">
-          <input class="checkbox__browser" name="user-policy" type="checkbox" required />
+          <input class="checkbox__browser" name="user-policy" type="checkbox" aria-label="policy agriment" required />
           <span class="checkbox__custom"></span>
           <span class="checkbox__text">Соглашаюсь с рассылкой и принимаю
-            <a class="checkbox__link" href="" target="_blank">Условия договора</a>
+            <a class="checkbox__link" href="" target="_blank" aria-label="user policy">Условия договора</a>
           </span>
         </label>
-        <button class="modal__btn--submit" type="submit"><span>Отправить</span></button>
+        <button class="modal__btn--submit" type="submit" aria-label="send data"><span>Отправить</span></button>
       </form>
     </div>
   </div>

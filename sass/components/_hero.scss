@@ -6,7 +6,7 @@
         padding: 118px 0;
     }
 
-    @media screen and (min-width:$desctop) {
+    @media screen and (min-width:$desktop) {
         padding: 200px 0;
     }
 
@@ -64,7 +64,7 @@
         }
     }
 
-    @media screen and (min-width:$desctop) {
+    @media screen and (min-width:$desktop) {
         max-width: 1600px;
         height: 600px;
         background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/hero/Hero-1600@1x.jpg');
@@ -103,7 +103,7 @@
         line-height: 1.62;
         width: 360px;
     }
-    @media screen and (min-width: $desctop) {
+    @media screen and (min-width: $desktop) {
         font-size: 44px;
         line-height: 1.36;
         width: 696px;

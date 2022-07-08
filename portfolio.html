@@ -17,38 +17,41 @@
 <body data-body data-body-burger>
   <header class="header">
     <div class="header__item" data-header>
-      <a class="logo logo--header" data-logo href="./index.html"> <span class="logo__accent">Web</span>Studio </a>
+      <a class="logo logo--header" data-logo href="./index.html">
+        <span class="logo__accent">Web</span>Studio
+      </a>
       <div class="burger-menu" id="burger-menu" data-menu>
         <nav class="nav">
           <ul class="nav__list">
-            <li class="nav__item  ">
-              <a class="header__link" href="./index.html"> Студия</a>
+            <li class="nav__item">
+              <a class="header__link" href="./index.html" aria-label="studio"> Студия</a>
             </li>
             <li class="nav__item nav__item--current">
-              <a class="header__link " href="./portfolio.html"> Портфолио</a>
+              <a class="header__link" href="./portfolio.html" aria-label="portfolio"> Портфолио</a>
             </li>
             <li class="nav__item">
-              <a class="header__link" href="">Контакты</a>
+              <a class="header__link" href="" aria-label="contacts">Контакты</a>
             </li>
           </ul>
         </nav>
         <ul class="contacts">
           <li class="contacts__item">
-            <a class="contacts__link contacts__link--burgger-menu-tel" href="mailto:info@devstudio.com">
+            <a class="contacts__link contacts__link--burgger-menu-tel" href="mailto:info@devstudio.com"
+              aria-label="mail">
               <svg class="contacts__icon" width="16" height="12">
                 <use href="./images/icons.svg#icon-mail"></use>
               </svg>
               info@devstudio.com</a>
           </li>
           <li class="contacts__item">
-            <a class="contacts__link" href="tel:+380961111111">
+            <a class="contacts__link" href="tel:+380961111111" aria-label="tel">
               <svg class="contacts__icon" width="10" height="16">
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11</a>
           </li>
           <ul class="social social--burger-menu">
-            <li class="social__item social__item--burger-menu ">
+            <li class="social__item social__item--burger-menu">
               <a class="social__link--burger-menu" aria-label="instagram" href="">
                 <svg class="social__icon social__icon--burger-menu" width="20" height="20">
                   <use href="./images/icons.svg#icon-instagram"></use>
@@ -58,14 +61,14 @@
             </li>
             <li class="social__item social__item--burger-menu">
               <a class="social__link--burger-menu" aria-label="twitter" href="">
-                <svg class="social__icon social__icon--burger-menu " width="20" height="20">
+                <svg class="social__icon social__icon--burger-menu" width="20" height="20">
                   <use href="./images/icons.svg#icon-twitter"></use>
                 </svg>
                 <span class="social__name--burger-menu">twitter</span>
               </a>
             </li>
             <li class="social__item social__item--burger-menu">
-              <a class="social__link--burger-menu " aria-label="facebook" href="">
+              <a class="social__link--burger-menu" aria-label="facebook" href="">
                 <svg class="social__icon social__icon--burger-menu" width="20" height="20">
                   <use href="./images/icons.svg#icon-facebook"></use>
                 </svg>
@@ -82,16 +85,14 @@
             </li>
           </ul>
         </ul>
-
       </div>
-      <button class="burger-menu__btn" data-menu-button type="button">
+      <button class="burger-menu__btn" data-menu-button type="button" aria-label="mobile menu button">
         <svg class="burger-menu__btn-icon" width="24" height="16" aria-label="mobile menu switch"
           aria-controls="burger-menu">
           <use class="icon-menu" href="./images/icons.svg#icon-burger"></use>
           <use class="icon-cross" href="./images/icons.svg#icon-cross"></use>
         </svg>
       </button>
-
     </div>
   </header>
   <main>
@@ -102,39 +103,62 @@
         <!-- Filters -->
         <ul class="filter">
           <li class="filter__item">
-            <button class="filter__btn" type="button">Все</button>
+            <button class="filter__btn" type="button" aria-label="filter button all">Все</button>
           </li>
           <li class="filter__item">
-            <button class="filter__btn" type="button">Веб-сайты</button>
+            <button class="filter__btn" type="button" aria-label="filter button wed site">Веб-сайты</button>
           </li>
           <li class="filter__item">
-            <button class="filter__btn" type="button">Приложения</button>
+            <button class="filter__btn" type="button" aria-label="filter button apps">Приложения</button>
           </li>
           <li class="filter__item">
-            <button class="filter__btn" type="button">Дизайн</button>
+            <button class="filter__btn" type="button" aria-label="filter button design">Дизайн</button>
           </li>
           <li class="filter__item">
-            <button class="filter__btn" type="button">Маркетинг</button>
+            <button class="filter__btn" type="button" aria-label="filter button marketing">Маркетинг</button>
           </li>
         </ul>
 
         <!-- Projects -->
         <ul class="project">
           <li class="project__item">
-            <a class="project__link" href="" target="_blank">
+            <a class="project__link" href="" target="_blank" aria-label="project-1">
+              <!-- project-1 -->
               <div class="project__thumb">
                 <picture>
                   <source srcset="
-                    ./images/portfilio/project-1@1x.webp 1x,
-                    ./images/portfilio/project-1@2x.webp 2x,
-                    ./images/portfilio/project-1@3x.webp 3x
-                  " type="image/webp" />
+                        ./images/mobile/portfolio/project-1-mobile@1x.webp 1x,
+                        ./images/mobile/portfolio/project-1-mobile@2x.webp 2x,
+                        ./images/mobile/portfolio/project-1-mobile@3x.webp 3x
+                      " type="image/webp" media="(max-width:767px)" />
                   <source srcset="
-                    ./images/portfilio/project-1@1x.jpg 1x,
-                    ./images/portfilio/project-1@2x.jpg 2x,
-                    ./images/portfilio/project-1@3x.jpg 3x
-                  " type="image/jpg" />
-                  <img class="project__img" src="./images/portfilio/project-1@1x.jpg" width="370" alt="Технокряк" />
+                        ./images/tablet/portfolio/project-1-tablet@1x.webp 1x,
+                        ./images/tablet/portfolio/project-1-tablet@2x.webp 2x,
+                        ./images/tablet/portfolio/project-1-tablet@3x.webp 3x
+                      " type="image/webp" media="(max-width: 1199px)" />
+                  <source srcset="
+                        ./images/desktop/portfolio/project-1-desktop@1x.webp 1x,
+                        ./images/desktop/portfolio/project-1-desktop@2x.webp 2x,
+                        ./images/desktop/portfolio/project-1-desktop@3x.webp 3x
+                      " type="image/webp" media="(min-width: 1200px)" />
+
+                  <source srcset="
+                        ./images/mobile/portfolio/project-1-mobile@1x.jpg 1x,
+                        ./images/mobile/portfolio/project-1-mobile@2x.jpg 2x,
+                        ./images/mobile/portfolio/project-1-mobile@3x.jpg 3x
+                      " type="image/jpg" media="(max-width:767px)" />
+                  <source srcset="
+                        ./images/tablet/portfolio/project-1-tablet@1x.jpg 1x,
+                        ./images/tablet/portfolio/project-1-tablet@2x.jpg 2x,
+                        ./images/tablet/portfolio/project-1-tablet@3x.jpg 3x
+                      " type="image/jpg" media="(max-width: 1199px)" />
+                  <source srcset="
+                        ./images/desktop/portfolio/project-1-desktop@1x.jpg 1x,
+                        ./images/desktop/portfolio/project-1-desktop@2x.jpg 2x,
+                        ./images/desktop/portfolio/project-1-desktop@3x.jpg 3x
+                      " type="image/jpg" media="(min-width: 1200px)" />
+                  <img class="project__img" src="./images/mobile/portfolio/project-1-mobile@1x.jpg" width="370"
+                    alt="Технокряк" />
                 </picture>
 
                 <div class="project__overlay">
@@ -153,20 +177,43 @@
             </a>
           </li>
           <li class="project__item">
-            <a class="project__link" href="" target="_blank">
+            <a class="project__link" href="" target="_blank" aria-label="project-2">
+              <!-- project-2 -->
               <div class="project__thumb">
                 <picture>
                   <source srcset="
-                    ./images/portfilio/project-2@1x.webp 1x,
-                    ./images/portfilio/project-2@2x.webp 2x,
-                    ./images/portfilio/project-2@3x.webp 3x
-                  " type="image/webp" />
+                        ./images/mobile/portfolio/project-2-mobile@1x.webp 1x,
+                        ./images/mobile/portfolio/project-2-mobile@2x.webp 2x,
+                        ./images/mobile/portfolio/project-2-mobile@3x.webp 3x
+                      " type="image/webp" media="(max-width:767px)" />
                   <source srcset="
-                    ./images/portfilio/project-2@1x.jpg 1x,
-                    ./images/portfilio/project-2@2x.jpg 2x,
-                    ./images/portfilio/project-2@3x.jpg 3x
-                  " type="image/jpg" />
-                  <img class="project__img" src="./images/portfilio/project-2@1x.jpg" width="370" alt="Постер" />
+                        ./images/tablet/portfolio/project-2-tablet@1x.webp 1x,
+                        ./images/tablet/portfolio/project-2-tablet@2x.webp 2x,
+                        ./images/tablet/portfolio/project-2-tablet@3x.webp 3x
+                      " type="image/webp" media="(max-width: 1199px)" />
+                  <source srcset="
+                        ./images/desktop/portfolio/project-2-desktop@1x.webp 1x,
+                        ./images/desktop/portfolio/project-2-desktop@2x.webp 2x,
+                        ./images/desktop/portfolio/project-2-desktop@3x.webp 3x
+                      " type="image/webp" media="(min-width: 1200px)" />
+
+                  <source srcset="
+                        ./images/mobile/portfolio/project-2-mobile@1x.jpg 1x,
+                        ./images/mobile/portfolio/project-2-mobile@2x.jpg 2x,
+                        ./images/mobile/portfolio/project-2-mobile@3x.jpg 3x
+                      " type="image/jpg" media="(max-width:767px)" />
+                  <source srcset="
+                        ./images/tablet/portfolio/project-2-tablet@1x.jpg 1x,
+                        ./images/tablet/portfolio/project-2-tablet@2x.jpg 2x,
+                        ./images/tablet/portfolio/project-2-tablet@3x.jpg 3x
+                      " type="image/jpg" media="(max-width: 1199px)" />
+                  <source srcset="
+                        ./images/desktop/portfolio/project-2-desktop@1x.jpg 1x,
+                        ./images/desktop/portfolio/project-2-desktop@2x.jpg 2x,
+                        ./images/desktop/portfolio/project-2-desktop@3x.jpg 3x
+                      " type="image/jpg" media="(min-width: 1200px)" />
+                  <img class="project__img" src=" ./images/mobile/portfolio/project-2-mobile@1x.jpg" width="370"
+                    alt="Постер" />
                 </picture>
 
                 <div class="project__overlay">
@@ -185,20 +232,43 @@
             </a>
           </li>
           <li class="project__item">
-            <a class="project__link" href="" target="_blank">
+            <a class="project__link" href="" target="_blank" aria-label="project-3">
+              <!-- project-3 -->
               <div class="project__thumb">
                 <picture>
                   <source srcset="
-                    ./images/portfilio/project-3@1x.webp 1x,
-                    ./images/portfilio/project-3@2x.webp 2x,
-                    ./images/portfilio/project-3@3x.webp 3x
-                  " type="image/webp" />
+                        ./images/mobile/portfolio/project-3-mobile@1x.webp 1x,
+                        ./images/mobile/portfolio/project-3-mobile@2x.webp 2x,
+                        ./images/mobile/portfolio/project-3-mobile@3x.webp 3x
+                      " type="image/webp" media="(max-width:767px)" />
                   <source srcset="
-                    ./images/portfilio/project-3@1x.jpg 1x,
-                    ./images/portfilio/project-3@2x.jpg 2x,
-                    ./images/portfilio/project-3@3x.jpg 3x
-                  " type="image/jpg" />
-                  <img class="project__img" src="./images/portfilio/project-3@1x.jpg" width="370" alt="Ресторан" />
+                        ./images/tablet/portfolio/project-3-tablet@1x.webp 1x,
+                        ./images/tablet/portfolio/project-3-tablet@2x.webp 2x,
+                        ./images/tablet/portfolio/project-3-tablet@3x.webp 3x
+                      " type="image/webp" media="(max-width: 1199px)" />
+                  <source srcset="
+                        ./images/desktop/portfolio/project-3-desktop@1x.webp 1x,
+                        ./images/desktop/portfolio/project-3-desktop@2x.webp 2x,
+                        ./images/desktop/portfolio/project-3-desktop@3x.webp 3x
+                      " type="image/webp" media="(min-width: 1200px)" />
+
+                  <source srcset="
+                        ./images/mobile/portfolio/project-3-mobile@1x.jpg 1x,
+                        ./images/mobile/portfolio/project-3-mobile@2x.jpg 2x,
+                        ./images/mobile/portfolio/project-3-mobile@3x.jpg 3x
+                      " type="image/jpg" media="(max-width:767px)" />
+                  <source srcset="
+                        ./images/tablet/portfolio/project-3-tablet@1x.jpg 1x,
+                        ./images/tablet/portfolio/project-3-tablet@2x.jpg 2x,
+                        ./images/tablet/portfolio/project-3-tablet@3x.jpg 3x
+                      " type="image/jpg" media="(max-width: 1199px)" />
+                  <source srcset="
+                        ./images/desktop/portfolio/project-3-desktop@1x.jpg 1x,
+                        ./images/desktop/portfolio/project-3-desktop@2x.jpg 2x,
+                        ./images/desktop/portfolio/project-3-desktop@3x.jpg 3x
+                      " type="image/jpg" media="(min-width: 1200px)" />
+                  <img class="project__img" src="./images/mobile/portfolio/project-3-mobile@1x.jpg" width="370"
+                    alt="Ресторан" />
                 </picture>
 
                 <div class="project__overlay">
@@ -218,20 +288,43 @@
             </a>
           </li>
           <li class="project__item">
-            <a class="project__link" href="" target="_blank">
+            <a class="project__link" href="" target="_blank" aria-label="project-4">
+              <!-- project-4 -->
               <div class="project__thumb">
                 <picture>
                   <source srcset="
-                    ./images/portfilio/project-4@1x.webp 1x,
-                    ./images/portfilio/project-4@2x.webp 2x,
-                    ./images/portfilio/project-4@3x.webp 3x
-                  " type="image/webp" />
+                        ./images/mobile/portfolio/project-4-mobile@1x.webp 1x,
+                        ./images/mobile/portfolio/project-4-mobile@2x.webp 2x,
+                        ./images/mobile/portfolio/project-4-mobile@3x.webp 3x
+                      " type="image/webp" media="(max-width:767px)" />
                   <source srcset="
-                    ./images/portfilio/project-4@1x.jpg 1x,
-                    ./images/portfilio/project-4@2x.jpg 2x,
-                    ./images/portfilio/project-4@3x.jpg 3x
-                  " type="image/jpg" />
-                  <img class="project__img" src="./images/portfilio/project-4@1x.jpg" width="370" alt="Проект Prime " />
+                        ./images/tablet/portfolio/project-4-tablet@1x.webp 1x,
+                        ./images/tablet/portfolio/project-4-tablet@2x.webp 2x,
+                        ./images/tablet/portfolio/project-4-tablet@3x.webp 3x
+                      " type="image/webp" media="(max-width: 1199px)" />
+                  <source srcset="
+                        ./images/desktop/portfolio/project-4-desktop@1x.webp 1x,
+                        ./images/desktop/portfolio/project-4-desktop@2x.webp 2x,
+                        ./images/desktop/portfolio/project-4-desktop@3x.webp 3x
+                      " type="image/webp" media="(min-width: 1200px)" />
+
+                  <source srcset="
+                        ./images/mobile/portfolio/project-4-mobile@1x.jpg 1x,
+                        ./images/mobile/portfolio/project-4-mobile@2x.jpg 2x,
+                        ./images/mobile/portfolio/project-4-mobile@3x.jpg 3x
+                      " type="image/jpg" media="(max-width:767px)" />
+                  <source srcset="
+                        ./images/tablet/portfolio/project-4-tablet@1x.jpg 1x,
+                        ./images/tablet/portfolio/project-4-tablet@2x.jpg 2x,
+                        ./images/tablet/portfolio/project-4-tablet@3x.jpg 3x
+                      " type="image/jpg" media="(max-width: 1199px)" />
+                  <source srcset="
+                        ./images/desktop/portfolio/project-4-desktop@1x.jpg 1x,
+                        ./images/desktop/portfolio/project-4-desktop@2x.jpg 2x,
+                        ./images/desktop/portfolio/project-4-desktop@3x.jpg 3x
+                      " type="image/jpg" media="(min-width: 1200px)" />
+                  <img class="project__img" src="./images/mobile/portfolio/project-4-mobile@1x.jpg" width="370"
+                    alt="Проект Prime" />
                 </picture>
 
                 <div class="project__overlay">
@@ -249,20 +342,43 @@
             </a>
           </li>
           <li class="project__item">
-            <a class="project__link" href="" target="_blank">
+            <a class="project__link" href="" target="_blank" aria-label="project-5">
+              <!-- project-5 -->
               <div class="project__thumb">
                 <picture>
                   <source srcset="
-                    ./images/portfilio/project-5@1x.webp 1x,
-                    ./images/portfilio/project-5@2x.webp 2x,
-                    ./images/portfilio/project-5@3x.webp 3x
-                  " type="image/webp" />
+                        ./images/mobile/portfolio/project-5-mobile@1x.webp 1x,
+                        ./images/mobile/portfolio/project-5-mobile@2x.webp 2x,
+                        ./images/mobile/portfolio/project-5-mobile@3x.webp 3x
+                      " type="image/webp" media="(max-width:767px)" />
                   <source srcset="
-                    ./images/portfilio/project-5@1x.jpg 1x,
-                    ./images/portfilio/project-5@2x.jpg 2x,
-                    ./images/portfilio/project-5@3x.jpg 3x
-                  " type="image/jpg" />
-                  <img class="project__img" src="./images/portfilio/project-5@1x.jpg" width="370" alt="Проект Boxes" />
+                        ./images/tablet/portfolio/project-5-tablet@1x.webp 1x,
+                        ./images/tablet/portfolio/project-5-tablet@2x.webp 2x,
+                        ./images/tablet/portfolio/project-5-tablet@3x.webp 3x
+                      " type="image/webp" media="(max-width: 1199px)" />
+                  <source srcset="
+                        ./images/desktop/portfolio/project-5-desktop@1x.webp 1x,
+                        ./images/desktop/portfolio/project-5-desktop@2x.webp 2x,
+                        ./images/desktop/portfolio/project-5-desktop@3x.webp 3x
+                      " type="image/webp" media="(min-width: 1200px)" />
+
+                  <source srcset="
+                        ./images/mobile/portfolio/project-5-mobile@1x.jpg 1x,
+                        ./images/mobile/portfolio/project-5-mobile@2x.jpg 2x,
+                        ./images/mobile/portfolio/project-5-mobile@3x.jpg 3x
+                      " type="image/jpg" media="(max-width:767px)" />
+                  <source srcset="
+                        ./images/tablet/portfolio/project-5-tablet@1x.jpg 1x,
+                        ./images/tablet/portfolio/project-5-tablet@2x.jpg 2x,
+                        ./images/tablet/portfolio/project-5-tablet@3x.jpg 3x
+                      " type="image/jpg" media="(max-width: 1199px)" />
+                  <source srcset="
+                        ./images/desktop/portfolio/project-5-desktop@1x.jpg 1x,
+                        ./images/desktop/portfolio/project-5-desktop@2x.jpg 2x,
+                        ./images/desktop/portfolio/project-5-desktop@3x.jpg 3x
+                      " type="image/jpg" media="(min-width: 1200px)" />
+                  <img class="project__img" src="./images/mobile/portfolio/project-5-mobile@1x.jpg" width="370"
+                    alt="Проект Boxes" />
                 </picture>
 
                 <div class="project__overlay">
@@ -280,20 +396,42 @@
             </a>
           </li>
           <li class="project__item">
-            <a class="project__link" href="" target="_blank">
+            <a class="project__link" href="" target="_blank" aria-label="project-6">
+              <!-- project-6 -->
               <div class="project__thumb">
                 <picture>
                   <source srcset="
-                    ./images/portfilio/project-6@1x.webp 1x,
-                    ./images/portfilio/project-6@2x.webp 2x,
-                    ./images/portfilio/project-6@3x.webp 3x
-                  " type="image/webp" />
+                        ./images/mobile/portfolio/project-6-mobile@1x.webp 1x,
+                        ./images/mobile/portfolio/project-6-mobile@2x.webp 2x,
+                        ./images/mobile/portfolio/project-6-mobile@3x.webp 3x
+                      " type="image/webp" media="(max-width:767px)" />
                   <source srcset="
-                    ./images/portfilio/project-6@1x.jpg 1x,
-                    ./images/portfilio/project-6@2x.jpg 2x,
-                    ./images/portfilio/project-6@3x.jpg 3x
-                  " type="image/jpg" />
-                  <img class="project__img" src="./images/portfilio/project-6@1x.jpg" width="370"
+                        ./images/tablet/portfolio/project-6-tablet@1x.webp 1x,
+                        ./images/tablet/portfolio/project-6-tablet@2x.webp 2x,
+                        ./images/tablet/portfolio/project-6-tablet@3x.webp 3x
+                      " type="image/webp" media="(max-width: 1199px)" />
+                  <source srcset="
+                        ./images/desktop/portfolio/project-6-desktop@1x.webp 1x,
+                        ./images/desktop/portfolio/project-6-desktop@2x.webp 2x,
+                        ./images/desktop/portfolio/project-6-desktop@3x.webp 3x
+                      " type="image/webp" media="(min-width: 1200px)" />
+
+                  <source srcset="
+                        ./images/mobile/portfolio/project-6-mobile@1x.jpg 1x,
+                        ./images/mobile/portfolio/project-6-mobile@2x.jpg 2x,
+                        ./images/mobile/portfolio/project-6-mobile@3x.jpg 3x
+                      " type="image/jpg" media="(max-width:767px)" />
+                  <source srcset="
+                        ./images/tablet/portfolio/project-6-tablet@1x.jpg 1x,
+                        ./images/tablet/portfolio/project-6-tablet@2x.jpg 2x,
+                        ./images/tablet/portfolio/project-6-tablet@3x.jpg 3x
+                      " type="image/jpg" media="(max-width: 1199px)" />
+                  <source srcset="
+                        ./images/desktop/portfolio/project-6-desktop@1x.jpg 1x,
+                        ./images/desktop/portfolio/project-6-desktop@2x.jpg 2x,
+                        ./images/desktop/portfolio/project-6-desktop@3x.jpg 3x
+                      " type="image/jpg" media="(min-width: 1200px)" />
+                  <img class="project__img" src="./images/mobile/portfolio/project-6-mobile@1x.jpg" width="370"
                     alt="Inspiration has no Borders" />
                 </picture>
 
@@ -312,20 +450,43 @@
             </a>
           </li>
           <li class="project__item">
-            <a class="project__link" href="" target="_blank">
+            <a class="project__link" href="" target="_blank" aria-label="project-7">
+              <!-- project-7 -->
               <div class="project__thumb">
                 <picture>
                   <source srcset="
-                    ./images/portfilio/project-7@1x.webp 1x,
-                    ./images/portfilio/project-7@2x.webp 2x,
-                    ./images/portfilio/project-7@3x.webp 3x
-                  " type="image/webp" />
+                        ./images/mobile/portfolio/project-7-mobile@1x.webp 1x,
+                        ./images/mobile/portfolio/project-7-mobile@2x.webp 2x,
+                        ./images/mobile/portfolio/project-7-mobile@3x.webp 3x
+                      " type="image/webp" media="(max-width:767px)" />
                   <source srcset="
-                    ./images/portfilio/project-7@1x.jpg 1x,
-                    ./images/portfilio/project-7@2x.jpg 2x,
-                    ./images/portfilio/project-7@3x.jpg 3x
-                  " type="image/jpg" />
-                  <img class="project__img" src="./images/portfilio/project-7@1x.jpg" width="370" alt="Издание" />
+                        ./images/tablet/portfolio/project-7-tablet@1x.webp 1x,
+                        ./images/tablet/portfolio/project-7-tablet@2x.webp 2x,
+                        ./images/tablet/portfolio/project-7-tablet@3x.webp 3x
+                      " type="image/webp" media="(max-width: 1199px)" />
+                  <source srcset="
+                        ./images/desktop/portfolio/project-7-desktop@1x.webp 1x,
+                        ./images/desktop/portfolio/project-7-desktop@2x.webp 2x,
+                        ./images/desktop/portfolio/project-7-desktop@3x.webp 3x
+                      " type="image/webp" media="(min-width: 1200px)" />
+
+                  <source srcset="
+                        ./images/mobile/portfolio/project-7-mobile@1x.jpg 1x,
+                        ./images/mobile/portfolio/project-7-mobile@2x.jpg 2x,
+                        ./images/mobile/portfolio/project-7-mobile@3x.jpg 3x
+                      " type="image/jpg" media="(max-width:767px)" />
+                  <source srcset="
+                        ./images/tablet/portfolio/project-7-tablet@1x.jpg 1x,
+                        ./images/tablet/portfolio/project-7-tablet@2x.jpg 2x,
+                        ./images/tablet/portfolio/project-7-tablet@3x.jpg 3x
+                      " type="image/jpg" media="(max-width: 1199px)" />
+                  <source srcset="
+                        ./images/desktop/portfolio/project-7-desktop@1x.jpg 1x,
+                        ./images/desktop/portfolio/project-7-desktop@2x.jpg 2x,
+                        ./images/desktop/portfolio/project-7-desktop@3x.jpg 3x
+                      " type="image/jpg" media="(min-width: 1200px)" />
+                  <img class="project__img" src="./images/mobile/portfolio/project-7-mobile@1x.jpg" width="370"
+                    alt="Издание" />
                 </picture>
 
                 <div class="project__overlay">
@@ -343,20 +504,43 @@
             </a>
           </li>
           <li class="project__item">
-            <a class="project__link" href="" target="_blank">
+            <a class="project__link" href="" target="_blank" aria-label="project-8">
+              <!-- project-8 -->
               <div class="project__thumb">
                 <picture>
                   <source srcset="
-                    ./images/portfilio/project-8@1x.webp 1x,
-                    ./images/portfilio/project-8@2x.webp 2x,
-                    ./images/portfilio/project-8@3x.webp 3x
-                  " type="image/webp" />
+                        ./images/mobile/portfolio/project-8-mobile@1x.webp 1x,
+                        ./images/mobile/portfolio/project-8-mobile@2x.webp 2x,
+                        ./images/mobile/portfolio/project-8-mobile@3x.webp 3x
+                      " type="image/webp" media="(max-width:767px)" />
                   <source srcset="
-                    ./images/portfilio/project-8@1x.jpg 1x,
-                    ./images/portfilio/project-8@2x.jpg 2x,
-                    ./images/portfilio/project-8@3x.jpg 3x
-                  " type="image/jpg" />
-                  <img class="project__img" src="./images/portfilio/project-8@1x.jpg" width="370" alt="Проект LAB" />
+                        ./images/tablet/portfolio/project-8-tablet@1x.webp 1x,
+                        ./images/tablet/portfolio/project-8-tablet@2x.webp 2x,
+                        ./images/tablet/portfolio/project-8-tablet@3x.webp 3x
+                      " type="image/webp" media="(max-width: 1199px)" />
+                  <source srcset="
+                        ./images/desktop/portfolio/project-8-desktop@1x.webp 1x,
+                        ./images/desktop/portfolio/project-8-desktop@2x.webp 2x,
+                        ./images/desktop/portfolio/project-8-desktop@3x.webp 3x
+                      " type="image/webp" media="(min-width: 1200px)" />
+
+                  <source srcset="
+                        ./images/mobile/portfolio/project-8-mobile@1x.jpg 1x,
+                        ./images/mobile/portfolio/project-8-mobile@2x.jpg 2x,
+                        ./images/mobile/portfolio/project-8-mobile@3x.jpg 3x
+                      " type="image/jpg" media="(max-width:767px)" />
+                  <source srcset="
+                        ./images/tablet/portfolio/project-8-tablet@1x.jpg 1x,
+                        ./images/tablet/portfolio/project-8-tablet@2x.jpg 2x,
+                        ./images/tablet/portfolio/project-8-tablet@3x.jpg 3x
+                      " type="image/jpg" media="(max-width: 1199px)" />
+                  <source srcset="
+                        ./images/desktop/portfolio/project-8-desktop@1x.jpg 1x,
+                        ./images/desktop/portfolio/project-8-desktop@2x.jpg 2x,
+                        ./images/desktop/portfolio/project-8-desktop@3x.jpg 3x
+                      " type="image/jpg" media="(min-width: 1200px)" />
+                  <img class="project__img" src="./images/mobile/portfolio/project-8-mobile@1x.jpg" width="370"
+                    alt="Проект LAB" />
                 </picture>
 
                 <div class="project__overlay">
@@ -374,20 +558,42 @@
             </a>
           </li>
           <li class="project__item">
-            <a class="project__link" href="" target="_blank">
+            <a class="project__link" href="" target="_blank" aria-label="project-9">
+              <!-- project-9 -->
               <div class="project__thumb">
                 <picture>
                   <source srcset="
-                    ./images/portfilio/project-9@1x.webp 1x,
-                    ./images/portfilio/project-9@2x.webp 2x,
-                    ./images/portfilio/project-9@3x.webp 3x
-                  " type="image/webp" />
+                        ./images/mobile/portfolio/project-9-mobile@1x.webp 1x,
+                        ./images/mobile/portfolio/project-9-mobile@2x.webp 2x,
+                        ./images/mobile/portfolio/project-9-mobile@3x.webp 3x
+                      " type="image/webp" media="(max-width:767px)" />
                   <source srcset="
-                    ./images/portfilio/project-9@1x.jpg 1x,
-                    ./images/portfilio/project-9@2x.jpg 2x,
-                    ./images/portfilio/project-9@3x.jpg 3x
-                  " type="image/jpg" />
-                  <img class="project__img" src="./images/portfilio/project-9@1x.jpg" width="370"
+                        ./images/tablet/portfolio/project-9-tablet@1x.webp 1x,
+                        ./images/tablet/portfolio/project-9-tablet@2x.webp 2x,
+                        ./images/tablet/portfolio/project-9-tablet@3x.webp 3x
+                      " type="image/webp" media="(max-width: 1199px)" />
+                  <source srcset="
+                        ./images/desktop/portfolio/project-9-desktop@1x.webp 1x,
+                        ./images/desktop/portfolio/project-9-desktop@2x.webp 2x,
+                        ./images/desktop/portfolio/project-9-desktop@3x.webp 3x
+                      " type="image/webp" media="(min-width: 1200px)" />
+
+                  <source srcset="
+                        ./images/mobile/portfolio/project-9-mobile@1x.jpg 1x,
+                        ./images/mobile/portfolio/project-9-mobile@2x.jpg 2x,
+                        ./images/mobile/portfolio/project-9-mobile@3x.jpg 3x
+                      " type="image/jpg" media="(max-width:767px)" />
+                  <source srcset="
+                        ./images/tablet/portfolio/project-9-tablet@1x.jpg 1x,
+                        ./images/tablet/portfolio/project-9-tablet@2x.jpg 2x,
+                        ./images/tablet/portfolio/project-9-tablet@3x.jpg 3x
+                      " type="image/jpg" media="(max-width: 1199px)" />
+                  <source srcset="
+                        ./images/desktop/portfolio/project-9-desktop@1x.jpg 1x,
+                        ./images/desktop/portfolio/project-9-desktop@2x.jpg 2x,
+                        ./images/desktop/portfolio/project-9-desktop@3x.jpg 3x
+                      " type="image/jpg" media="(min-width: 1200px)" />
+                  <img class="project__img" src="./images/mobile/portfolio/project-9-mobile@1x.jpg" width="370"
                     alt="Growing Business" />
                 </picture>
 
@@ -415,21 +621,19 @@
     <div class="footer__item">
       <h2 class="footer__title">Contacts</h2>
       <div class="footer-contacts">
-        <a class="logo logo--footer" href="/">
-          <span class="logo__accent">Web</span>Studio
-        </a>
+        <a class="logo logo--footer" href="/"> <span class="logo__accent">Web</span>Studio </a>
         <address class="footer-contacts__adress">
           <ul class="footer-contacts__list">
             <li class="footer-contacts__item">
-              <a class="footer-contacts__link footer-contacts__link--building"
+              <a class="footer-contacts__link footer-contacts__link--building" aria-label="building"
                 href="https://goo.gl/maps/JCj7jRZ64n47ZgnA9" target="_blank" rel="nofollow noopener noreferrer">г. Киев,
                 пр-т Леси Украинки, 26</a>
             </li>
             <li class="footer-contacts__item">
-              <a class="footer-contacts__link" href="mailto:info@example.com">info@example.com</a>
+              <a class="footer-contacts__link" href="mailto:info@example.com" aria-label="email">info@example.com</a>
             </li>
             <li class="footer-contacts__item">
-              <a class="footer-contacts__link" href="tel:+380961111111">+38 096 111 11 11</a>
+              <a class="footer-contacts__link" href="tel:+380961111111" aria-label="tel">+38 096 111 11 11</a>
             </li>
           </ul>
         </address>
@@ -475,10 +679,11 @@
         <p class="footer__subtitle">Подпишитесь на рассылку</p>
         <form class="footer-subscribe__form" autocomplete="off">
           <div class="footer-subscribe__input">
-            <input class="footer-subscribe__field" type="email" name="subscribe" placeholder=" " required />
+            <input class="footer-subscribe__field" type="email" name="subscribe" aria-label="email" placeholder=" "
+              required />
             <span class="footer-subscribe__placeholder">E-mail</span>
           </div>
-          <button class="footer-subscribe-btn" type="submit">
+          <button class="footer-subscribe-btn" aria-label="subscribe button" type="submit">
             <span class="footer-subscribe-btn__text">Подписаться</span>
             <svg width="24" height="24">
               <use href="./images/icons.svg#icon-icon-send"></use>

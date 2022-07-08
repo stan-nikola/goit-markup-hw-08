@@ -42,7 +42,7 @@
         width: calc((100% - 15px*4)/2);
         margin: 15px;
     }
-    @media screen and (min-width:$desctop){
+    @media screen and (min-width:$desktop){
         width: calc((100% - 30px*3)/4);
         &:not(:last-child){
             margin-right: 30px;

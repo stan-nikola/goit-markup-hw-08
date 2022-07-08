@@ -1385,15 +1385,10 @@ address {
 }
 @media screen and (max-width: 1199px) {
   .modal {
-    top: 208px;
-  }
-}
-@media screen and (max-width: 1199px) and (max-width: 767px) {
-  .modal {
     top: 93px;
   }
 }
-@media screen and (max-width: 1199px) and (max-width: 767px) and (max-width: 479px) {
+@media screen and (max-width: 1199px) and (max-width: 479px) {
   .modal {
     top: 83px;
     padding: 30px;
