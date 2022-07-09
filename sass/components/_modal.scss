@@ -1,5 +1,5 @@
 .modal {
-    position: absolute;
+    position: fixed;
     left: 50%;
     transform: translateX(-50%) scale(1);
     padding: 40px;
@@ -14,10 +14,6 @@
     .backdrop.is-hidden & {
         transform: translateX(-50%) scale(1.1);
     }
-
-
-       
-
         @media screen and (max-width:1199px) {
             top: 93px;
 
@@ -189,29 +185,30 @@
 }
 
 .checkbox__custom {
+    @include centered-flex($type: inline-flex);
     width: 16px;
     height: 15px;
-    border: 2px solid;
-    border-color: $primary-text-color;
+    outline: 2px solid;
+    outline-offset: -2px;
+    outline-color: $primary-text-color;
     border-radius: 2px;
     margin-right: 7px;
     transition: background-color 250ms $transition-timing-function,
-        background-image 250ms $transition-timing-function,
-        border-color 250ms $transition-timing-function;
+    box-shadow 250ms $transition-timing-function,
+        outline-color 250ms $transition-timing-function;
 
     .checkbox__browser:hover+&,
     .checkbox__browser:focus+& {
-        border-color: $accent-color;
+        outline-color: $accent-color;
+box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 
 
     }
 
     .checkbox__browser:checked+& {
         background-color: $accent-color;
-        border-color: $accent-color;
-        background-image: url(../images/svg/icon-check.svg);
-        background-size: contain;
-        background-origin: border-box;
+        outline-color: $accent-color;
+      
     }
 }
 
@@ -219,6 +216,7 @@
     line-height: 1.71;
     color: $third-text-color;
     flex-shrink: 6;
+    user-select: none;
 
     @media screen and (max-width: 1199px) {
         font-size: 12px;

@@ -26,6 +26,7 @@ address {
 
 .no-scroll {
   overflow: hidden;
+  padding-right: calc(18px - (100vw - 100%));
 }
 
 .no-scroll--burger {
@@ -1353,10 +1354,15 @@ address {
   z-index: 999;
   width: 100%;
   height: 100%;
-  overflow-y: scroll;
+  overflow-y: visible;
   background: rgba(0, 0, 0, 0.2);
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (max-width: 1199px) {
+  .backdrop {
+    overflow-y: scroll;
+  }
 }
 
 .backdrop.is-hidden {
@@ -1365,7 +1371,7 @@ address {
 }
 
 .modal {
-  position: absolute;
+  position: fixed;
   left: 50%;
   -webkit-transform: translateX(-50%) scale(1);
           transform: translateX(-50%) scale(1);
@@ -1580,24 +1586,35 @@ address {
 }
 
 .checkbox__custom {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 16px;
   height: 15px;
-  border: 2px solid;
-  border-color: #212121;
+  outline: 2px solid;
+  outline-offset: -2px;
+  outline-color: #212121;
   border-radius: 2px;
   margin-right: 7px;
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-image 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-image 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .checkbox__browser:hover + .checkbox__custom, .checkbox__browser:focus + .checkbox__custom {
-  border-color: #2196f3;
+  outline-color: #2196f3;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .checkbox__browser:checked + .checkbox__custom {
   background-color: #2196f3;
-  border-color: #2196f3;
-  background-image: url(../images/svg/icon-check.svg);
-  background-size: contain;
-  background-origin: border-box;
+  outline-color: #2196f3;
 }
 
 .checkbox__text {
@@ -1605,6 +1622,10 @@ address {
   color: #757575;
   -ms-flex-negative: 6;
       flex-shrink: 6;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 @media screen and (max-width: 1199px) {
   .checkbox__text {

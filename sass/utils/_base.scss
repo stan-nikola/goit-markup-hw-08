@@ -26,6 +26,9 @@ address {
 
 .no-scroll{
     overflow: hidden;
+ padding-right: calc(18px - (100vw - 100%));
+
+        
 }
 .no-scroll--burger{
     overflow: hidden;
