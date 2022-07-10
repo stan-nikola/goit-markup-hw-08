@@ -26,7 +26,10 @@ address {
 
 .no-scroll{
     overflow: hidden;
- padding-right: calc(17px - (100vw - 100%));
+    @media screen and (min-width: 1200px){
+        padding-right: calc(17px - (100vw - 100%));
+    }
+
 
         
 }

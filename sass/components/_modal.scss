@@ -1,5 +1,5 @@
 .modal {
-    position: fixed;
+    position: absolute;
     left: 50%;
     transform: translateX(-50%) scale(1);
     padding: 40px;
@@ -16,6 +16,7 @@
     }
         @media screen and (max-width:1199px) {
             top: 93px;
+            overflow-y: scroll;
 
             @media screen and (max-width:479px) {
                 top: 83px;
