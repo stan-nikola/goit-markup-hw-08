@@ -44,7 +44,7 @@
     }
 }
 
-.modal__btn--close {
+.modal__btn-close {
     position: absolute;
     @include centered-flex();
     top: 8px;
@@ -242,7 +242,7 @@ box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     }
 }
 
-.modal__btn--submit {
+.modal__btn-submit {
     @extend %button;
     width: 200px;
     height: 50px;

@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
 }
-.social--burger-menu {
+.burger-menu__social {
   justify-content: flex-start;
   flex-wrap: wrap;
   @media screen and (min-width: $tablet) {
@@ -35,6 +35,7 @@
   }
 }
 .social__link {
+
   @include centered-flex();
   width: 44px;
   height: 44px;
@@ -42,13 +43,13 @@
   transition: background-color 250ms $transition-timing-function,
     color 250ms $transition-timing-function;
 }
-.social__link--burger-menu {
+.social__link-burger-menu {
   @extend %link;
 }
 .social__name {
   @extend %visually-hidden;
 }
-.social__name--burger-menu {
+.social__name-burger-menu {
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;

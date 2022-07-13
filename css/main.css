@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Roboto", sans-serif;
   color: #212121;
@@ -70,7 +71,7 @@ address {
   }
 }
 
-.checkbox__link, .footer-contacts__link, .project__link, .client__link, .social__link--burger-menu, .logo, .contacts__link, .header__link {
+.checkbox__link, .footer-contacts__link, .project__link, .client__link, .social__link-burger-menu, .logo, .contacts__link, .header__link {
   text-decoration: none;
   color: currentColor;
 }
@@ -110,13 +111,40 @@ address {
   }
 }
 
-.modal__btn--submit, .footer-subscribe-btn, .filter__btn, .hero__btn {
+.modal__btn-submit, .footer-subscribe-btn, .filter__btn, .hero__btn {
   border-radius: 4px;
   border: none;
   font-size: 16px;
   font-family: inherit;
   cursor: pointer;
   text-align: center;
+}
+
+/* palette */
+/* Измени код под этой строкой */
+.up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  background-color: #007bff;
+  border: #6610f2;
+  cursor: pointer;
+  /* Измени код под этой строкой */
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.up:hover,
+.up:focus {
+  background-color: #6610f2;
 }
 
 .header {
@@ -816,7 +844,7 @@ address {
           justify-content: center;
 }
 
-.social--burger-menu {
+.burger-menu__social {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -824,7 +852,7 @@ address {
       flex-wrap: wrap;
 }
 @media screen and (min-width: 768px) {
-  .social--burger-menu {
+  .burger-menu__social {
     display: none;
   }
 }
@@ -871,7 +899,7 @@ address {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social__name--burger-menu {
+.social__name-burger-menu {
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
@@ -1417,7 +1445,7 @@ address {
   }
 }
 
-.modal__btn--close {
+.modal__btn-close {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1441,7 +1469,7 @@ address {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   fill: currentColor;
 }
-.modal__btn--close:hover, .modal__btn--close:focus {
+.modal__btn-close:hover, .modal__btn-close:focus {
   color: #2196f3;
 }
 
@@ -1642,7 +1670,7 @@ address {
   background-color: #2196f3;
 }
 
-.modal__btn--submit {
+.modal__btn-submit {
   width: 200px;
   height: 50px;
   background-color: #2196f3;
@@ -1657,7 +1685,7 @@ address {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal__btn--submit:hover, .modal__btn--submit:focus {
+.modal__btn-submit:hover, .modal__btn-submit:focus {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }/*# sourceMappingURL=main.css.map */

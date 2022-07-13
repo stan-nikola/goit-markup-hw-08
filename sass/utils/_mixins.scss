@@ -4,3 +4,36 @@
     justify-content: center;
     
 }
+
+
+
+
+/* palette */
+$blue: #6610f2;
+$lightBlue: #007bff;
+$white: #fff;
+
+/* Измени код под этой строкой */
+@mixin circle ($diameter) {
+    $diameter: 80px;
+    width: $diameter;
+    height: $diameter;
+    border-radius: 50%;
+}
+
+.up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    background-color: $lightBlue;
+    border: #6610f2;
+    cursor: pointer;
+    /* Измени код под этой строкой */
+    @include circle ($diameter: 100px);
+}
+
+.up:hover,
+.up:focus {
+    background-color: $blue;
+}
