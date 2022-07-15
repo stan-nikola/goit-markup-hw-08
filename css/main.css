@@ -862,22 +862,22 @@ address {
 }
 
 @media screen and (max-width: 767px) {
-  .social__item--burger-menu {
+  .burger-menu__social__item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .social__item--burger-menu:not(:last-child) {
+  .burger-menu__social__item:not(:last-child) {
     padding-right: 10px;
   }
-  .social__item--burger-menu::after {
+  .burger-menu__social__item::after {
     content: "";
     width: 1px;
     height: 100%;
     background-color: rgba(33, 33, 33, 0.2);
     margin-left: 10px;
   }
-  .social__item--burger-menu:last-child::after {
+  .burger-menu__social__item:last-child::after {
     display: none;
   }
 }
