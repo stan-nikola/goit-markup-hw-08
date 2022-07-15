@@ -1,5 +1,5 @@
 .hero {
-    background-color: $secondary-bgr-color;
+    background-color: var(--secondary-bgr-color);
     text-align: center;
 
     @media screen and (max-width:1199px) {
@@ -95,7 +95,7 @@
     font-weight: 900;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: $second-text-color;
+    color: var(--second-text-color);
     margin: 0 auto 30px auto;
     @media screen and (min-width:$mobile) and (max-width: 1199px) {
 
@@ -111,18 +111,19 @@
 }
 .hero__btn {
     @extend %button;
-    color: $second-text-color;
-    background: $accent-color;
+    color: var(--second-text-color);
+    background: var(--accent-color);
     font-weight: 700;
     letter-spacing: 0.06em;
     line-height: 1.88;
-    box-shadow: 0px 4px 4px $box-shadow-color;
+    box-shadow: 0px 4px 4px var(--box-shadow-color);
     padding: 10px 32px;
     min-width: 200px;
-    transition: background-color 250ms $transition-timing-function;
+        @include transition($property:background-color);
+    
 
     &:hover,
     &:focus {
-        background-color: $button-hover-color;
+        background-color: var(--button-hover-color);
     }
 }

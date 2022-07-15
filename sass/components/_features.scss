@@ -54,7 +54,7 @@
     @include centered-flex();
 
     height: 120px;
-    background-color: $third-bgr-color;
+    background-color: var(--third-bgr-color);
     border-radius: 4px;
     margin-bottom: 30px;
 }
@@ -75,6 +75,6 @@
 .feature__text {
     font-size: 14px;
     line-height: 1.71;
-    color: $third-text-color;
+    color: var(--third-text-color);
 
 }

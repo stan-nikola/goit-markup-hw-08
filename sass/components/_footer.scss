@@ -1,5 +1,5 @@
 .footer {
-    background-color: $secondary-bgr-color;
+    background-color: var(--secondary-bgr-color);
     padding: 60px 0;
 }
 
@@ -57,18 +57,19 @@
     @extend %link;
 
     line-height: 1.71;
-    color: $footer-text-color;
+    color: var(--footer-text-color);
     display: block;
-    transition: color 250ms $transition-timing-function;
+    @include transition($property: color);
+
 
     &:hover,
     &:focus {
-        color: $accent-color;
+        color: var(--accent-color);
     }
 }
 
 .footer-contacts__link--building {
-    color: $second-text-color;
+    color: var(--second-text-color);
 }
 
 .footer__subtitle {
@@ -76,7 +77,7 @@
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
-    color: $second-text-color;
+    color: var(--second-text-color);
     margin-bottom: 20px;
 }
 
@@ -129,17 +130,17 @@
     width: 100%;
     height: 50px;
     background-color: inherit;
-    color: $second-text-color;
+    color: var(--second-text-color);
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     padding: 15px 16px;
     outline: none;
-    transition: border-color 250ms $transition-timing-function;
+    @include transition($property: border-color);
 
     &:hover,
     &:focus {
-        border-color: $accent-color;
+        border-color: var(--accent-color);
     }
 
 }
@@ -152,14 +153,14 @@
 
     font-size: 16px;
     line-height: 1.25;
-    color: $footer-text-color;
+    color: var(--footer-text-color);
 
     .footer-subscribe__form:focus+&,
     .footer-subscribe__field:not(:placeholder-shown)+& {
         opacity: 0;
     }
-
-     transition: opacity 100ms $transition-timing-function; 
+  @include transition($property: opacity, $duration: 150ms);
+   
 }
 
 .footer-subscribe-btn {
@@ -168,13 +169,14 @@
     height: 50px;
 
     padding: 0 28px;
-    background-color: $accent-color;
-    color: $second-text-color;
+    background-color: var(--accent-color);
+    color: var(--second-text-color);
 
     font-weight: 700;
     line-height: 1.88;
     letter-spacing: 0.06em;
-    transition: box-shadow 250ms $transition-timing-function;
+    @include transition($property: box-shadow);
+
 
     &:hover,
     &:focus {

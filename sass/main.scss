@@ -1,8 +1,9 @@
-@import './utils/variables';
-@import './utils/base';
+@import './base/variables';
+@import './base/base';
 @import './utils/breakpoints';
 @import './utils/placeholder';
 @import './utils/mixins';
+@import './utils/card-indent';
 @import './components/header';
 @import './components/logo';
 @import './components/hero';

@@ -1,9 +1,9 @@
 body {
-    font-family: $main-font;
-    color: $primary-text-color;
+    font-family: var(--main-font);
+    color: var(--primary-text-color);
     letter-spacing: 0.03em;
-    background-color: $primary-bgr-color;
-    font-size: $primary-font-size;
+    background-color: var(--primary-bgr-color);
+    font-size: var(--primary-font-size);
 }
 
 ul,

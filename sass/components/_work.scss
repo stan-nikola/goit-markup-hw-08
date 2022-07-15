@@ -39,9 +39,9 @@
 
     width: 100%;
     height: $overlay-work-height-flexible;
-    background: $work-box-bg;
+    background: var(--work-box-bg);
     font-weight: 700;
     line-height: 1.14;
     text-transform: uppercase;
-    color: $second-text-color;
+    color: var(--second-text-color);
 }

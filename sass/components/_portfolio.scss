@@ -48,27 +48,27 @@
 .filter__btn {
     @extend %button;
 
-    color: $primary-text-color;
-    background: $third-bgr-color;
+    color: var(--primary-text-color);
+    background: var(--third-bgr-color);
     font-weight: 500;
     line-height: 1.62;
     letter-spacing: 0.03em;
     padding: 6px 22px;
-    transition: background-color 250ms$transition-timing-function,
-        color 250ms$transition-timing-function,
-        box-shadow 250ms$transition-timing-function;
+    transition: background-color 250ms var(--transition-timing-function),
+        color 250ms var(--transition-timing-function),
+        box-shadow 250ms var(--transition-timing-function);
 
     &:hover,
     &:focus {
-        background-color: $accent-color;
-        color: $second-text-color;
+        background-color: var(--accent-color);
+        color: var(--second-text-color);
         box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
             0px 2px 2px rgba(0, 0, 0, 0.12);
     }
 }
 .filter__btn--active{
-    background-color: $accent-color;
-        color: $second-text-color;
+    background-color: var(--accent-color);
+        color: var(--second-text-color);
         box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
             0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -96,7 +96,7 @@
         width: calc((100% - 30px)/2);
        
     }
-    @media screen and (min-width:$desktop){
+    @media screen and (min-width: $desktop){
         width: calc((100% - 30px*2)/3);
 
     }
@@ -108,7 +108,7 @@
     flex-direction: column;
     height: 100%;
 
-    transition: box-shadow 250ms $transition-timing-function;
+    transition: box-shadow 250ms var(--transition-timing-function);
 
     &:hover,
     &:focus {
@@ -144,7 +144,8 @@
 
     background-color: rgba(33, 150, 243, 0.9);
     transform: translateY(101%);
-    transition: transform 250ms$transition-timing-function;
+    @include transition($property: transform);
+    
 
     .project__link:hover &,
     .project__link:focus & {
@@ -155,7 +156,7 @@
 .project__overlay-text {
     font-size: 18px;
     line-height: 1.56;
-    color: $second-text-color;
+    color: var(--second-text-color);
     padding: 63px 24px;
 }
 
@@ -178,5 +179,5 @@
 .project__desc {
     font-size: 16px;
     line-height: 1.88;
-    color: $third-text-color;
+    color: var(--third-text-color);
 }

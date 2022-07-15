@@ -1,0 +1,15 @@
+        // card indent 
+
+        // // feature-card
+        // $feature-item: 4;
+        // $featire-item-indent: 30px;
+        // $featire-total-indent: calc($featire-item-indent*($feature-item - 1));
+
+        // work-card 
+        $work-item: 3;
+        $work-item-indent: 30px;
+        $work-total-indent: calc($work-item-indent*($work-item - 1));
+
+        $work-item-height: 294px;
+        $overlay-work-height: 70px;
+        $overlay-work-height-flexible: calc(($overlay-work-height / $work-item-height ) * 100%);

@@ -46,16 +46,16 @@
     @include centered-flex ();
 
     height: 92px;
-    border: 1px solid $primary-icon-fill;
+    border: 1px solid var(--primary-icon-fill);
     border-radius: 4px;
-    color: $primary-icon-fill;
-    transition: border-color 250ms $transition-timing-function,
-        color 250ms $transition-timing-function;
+    color: var(--primary-icon-fill);
+    @include transition($property: border-color color);
+  
 
     &:hover,
     &:focus {
-        border-color: $accent-color;
-        color: $accent-color;
+        border-color: var(--accent-color);
+        color: var(--accent-color);
     }
 }
 
