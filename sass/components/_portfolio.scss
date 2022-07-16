@@ -158,6 +158,10 @@
     line-height: 1.56;
     color: var(--second-text-color);
     padding: 63px 24px;
+    @media screen and (max-width: 450px) {
+        padding: 32px 24px;
+        font-size: 14px;
+    }
 }
 
 .project__meta {
