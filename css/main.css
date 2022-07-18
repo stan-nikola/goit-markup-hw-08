@@ -30,37 +30,6 @@ body {
   font-size: var(--primary-font-size);
 }
 
-ul,
-h1,
-h2,
-h3,
-p {
-  margin: 0;
-}
-
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-address {
-  font-style: normal;
-}
-
-.no-scroll {
-  overflow: hidden;
-}
-@media screen and (min-width: 1200px) {
-  .no-scroll {
-    padding-right: calc(17px - (100vw - 100%));
-  }
-}
-
-.no-scroll--burger {
-  overflow: hidden;
-}
-
 /* raleway-regular - latin_cyrillic */
 @font-face {
   font-family: "Raleway";
@@ -121,6 +90,37 @@ address {
   src: local(""), url("../fonts/roboto-v30-latin_cyrillic-900.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-v30-latin_cyrillic-900.woff2") format("woff2"), url("../fonts/roboto-v30-latin_cyrillic-900.woff") format("woff"), url("../fonts/roboto-v30-latin_cyrillic-900.ttf") format("truetype"), url("../fonts/roboto-v30-latin_cyrillic-900.svg#Roboto") format("svg");
   /* Legacy iOS */
 }
+ul,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+@media screen and (min-width: 1200px) {
+  .no-scroll {
+    padding-right: calc(17px - (100vw - 100%));
+  }
+}
+
+.no-scroll--burger {
+  overflow: hidden;
+}
+
 .footer__item, .contanier, .container, .header__item {
   padding-left: 15px;
   padding-right: 15px;
@@ -453,6 +453,17 @@ address {
   color: var(--accent-color);
 }
 
+@media screen and (max-width: 767px) {
+  .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
 @media screen and (min-width: 1200px) {
   .contacts {
     display: -webkit-box;
@@ -465,11 +476,11 @@ address {
 }
 
 @media screen and (max-width: 767px) {
-  .contacts__item:nth-child(-n+1) {
-    margin-bottom: 32px;
-  }
-  .contacts__item:nth-child(2) {
+  .contacts__item:first-child {
     margin-bottom: 64px;
+  }
+  .contacts__item:last-child {
+    margin-bottom: 32px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {

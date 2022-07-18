@@ -1,0 +1,32 @@
+ul,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+address {
+    font-style: normal;
+}
+
+.no-scroll {
+    overflow: hidden;
+
+    @media screen and (min-width: 1200px) {
+        padding-right: calc(17px - (100vw - 100%));
+    }
+
+
+
+}
+
+.no-scroll--burger {
+    overflow: hidden;
+}
