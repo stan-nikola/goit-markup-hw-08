@@ -960,7 +960,7 @@ address {
     display: flex;
   }
   .burger-menu__social__item:not(:last-child) {
-    padding-right: 10px;
+    margin-right: 10px;
   }
   .burger-menu__social__item:not(:last-child)::after {
     content: "";

@@ -25,7 +25,7 @@
     display: flex;
 
     &:not(:last-child) {
-      padding-right: 10px;
+      margin-right: 10px;
     }
 
     &:not(:last-child) {
@@ -37,7 +37,6 @@
         margin-left: 10px;
       }
     }
-
   }
 }
 
