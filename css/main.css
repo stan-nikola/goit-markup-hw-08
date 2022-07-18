@@ -962,15 +962,12 @@ address {
   .burger-menu__social__item:not(:last-child) {
     padding-right: 10px;
   }
-  .burger-menu__social__item::after {
+  .burger-menu__social__item:not(:last-child)::after {
     content: "";
     width: 1px;
     height: 100%;
     background-color: rgba(33, 33, 33, 0.2);
     margin-left: 10px;
-  }
-  .burger-menu__social__item:last-child::after {
-    display: none;
   }
 }
 
