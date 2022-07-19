@@ -1576,7 +1576,7 @@ address {
 @media screen and (min-width: 480px) and (max-width: 1199px) {
   .modal {
     width: 450px;
-    min-height: 581px;
+    height: 581px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1586,7 +1586,7 @@ address {
     -webkit-transform: translate(-50%, -50%) scale(1);
             transform: translate(-50%, -50%) scale(1);
     width: 528px;
-    min-height: 581px;
+    height: 581px;
   }
   .backdrop.is-hidden .modal {
     -webkit-transform: translate(-50%, -50%) scale(1.1);
@@ -1649,7 +1649,7 @@ address {
           flex-direction: column;
 }
 .modal__form :nth-child(4) {
-  margin-bottom: 26px;
+  margin-bottom: 23px;
 }
 
 .label {
@@ -1751,7 +1751,7 @@ address {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 @media screen and (max-width: 479px) {
   .checkbox {

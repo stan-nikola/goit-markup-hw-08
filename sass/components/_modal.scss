@@ -28,7 +28,7 @@
 
     @media screen and (min-width:$mobile) and (max-width: 1199px) {
         width: 450px;
-            min-height: 581px;
+            height: 581px;
     }
 
     @media screen and (min-width:$desktop) {
@@ -36,7 +36,7 @@
         left: 50%;
         transform: translate(-50%, -50%) scale(1);
         width: 528px;
-        min-height: 581px;
+        height: 581px;
 
         .backdrop.is-hidden & {
             transform: translate(-50%, -50%) scale(1.1);
@@ -82,7 +82,7 @@
     flex-direction: column;
 
     & :nth-child(4) {
-        margin-bottom: 26px;
+        margin-bottom: 23px;
     }
 }
 
@@ -165,7 +165,7 @@
 
 .checkbox {
     display: inline-flex;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 
     @media screen and (max-width: 479px) {
         margin-bottom: 20px;
