@@ -28,7 +28,7 @@
 
     @media screen and (min-width:$mobile) and (max-width: 1199px) {
         width: 450px;
-        height: 609px;
+            min-height: 581px;
     }
 
     @media screen and (min-width:$desktop) {
@@ -36,7 +36,7 @@
         left: 50%;
         transform: translate(-50%, -50%) scale(1);
         width: 528px;
-        height: 581px;
+        min-height: 581px;
 
         .backdrop.is-hidden & {
             transform: translate(-50%, -50%) scale(1.1);
