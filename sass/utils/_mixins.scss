@@ -5,7 +5,7 @@
     
 }
  
-@mixin transition($property: $property, $duration: 250ms ){
+@mixin transition ($property, $duration: 250ms ){
     transition-property: $property;
         transition-duration: $duration;
         transition-timing-function: var(--transition-timing-function);

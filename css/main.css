@@ -309,8 +309,10 @@ address {
   opacity: 0;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
-  -webkit-transition-property: opacity transform;
-  transition-property: opacity transform;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: var(--transition-timing-function);
@@ -320,8 +322,10 @@ address {
   opacity: 1;
   -webkit-transform: translateX(0);
           transform: translateX(0);
-  -webkit-transition-property: opacity transform;
-  transition-property: opacity transform;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: var(--transition-timing-function);
@@ -331,8 +335,10 @@ address {
   opacity: 0;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
-  -webkit-transition-property: opacity transform;
-  transition-property: opacity transform;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: var(--transition-timing-function);
@@ -342,8 +348,10 @@ address {
   opacity: 1;
   -webkit-transform: translateX(0);
           transform: translateX(0);
-  -webkit-transition-property: opacity transform;
-  transition-property: opacity transform;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: var(--transition-timing-function);
@@ -596,10 +604,10 @@ address {
     pointer-events: initial;
     -webkit-transform: translateX(0);
             transform: translateX(0);
-    -webkit-transition-property: -webkit-transform opacity;
-    transition-property: -webkit-transform opacity;
-    transition-property: transform opacity;
-    transition-property: transform opacity, -webkit-transform opacity;
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    transition-property: opacity, transform;
+    transition-property: opacity, transform, -webkit-transform;
     -webkit-transition-duration: 250ms;
             transition-duration: 250ms;
     -webkit-transition-timing-function: var(--transition-timing-function);
@@ -613,10 +621,10 @@ address {
     pointer-events: none;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
-    -webkit-transition-property: -webkit-transform opacity;
-    transition-property: -webkit-transform opacity;
-    transition-property: transform opacity;
-    transition-property: transform opacity, -webkit-transform opacity;
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    transition-property: opacity, transform;
+    transition-property: opacity, transform, -webkit-transform;
     -webkit-transition-duration: 250ms;
             transition-duration: 250ms;
     -webkit-transition-timing-function: var(--transition-timing-function);
@@ -995,8 +1003,8 @@ address {
   width: 44px;
   height: 44px;
   border-radius: 50px;
-  -webkit-transition-property: background-color color;
-  transition-property: background-color color;
+  -webkit-transition-property: background-color, color;
+  transition-property: background-color, color;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: var(--transition-timing-function);
@@ -1094,8 +1102,8 @@ address {
   border: 1px solid var(--primary-icon-fill);
   border-radius: 4px;
   color: var(--primary-icon-fill);
-  -webkit-transition-property: border-color color;
-  transition-property: border-color color;
+  -webkit-transition-property: border-color, color;
+  transition-property: border-color, color;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: var(--transition-timing-function);
@@ -1156,10 +1164,14 @@ address {
   line-height: 1.62;
   letter-spacing: 0.03em;
   padding: 6px 22px;
-  -webkit-transition: background-color 250ms var(--transition-timing-function), color 250ms var(--transition-timing-function), -webkit-box-shadow 250ms var(--transition-timing-function);
-  transition: background-color 250ms var(--transition-timing-function), color 250ms var(--transition-timing-function), -webkit-box-shadow 250ms var(--transition-timing-function);
-  transition: background-color 250ms var(--transition-timing-function), color 250ms var(--transition-timing-function), box-shadow 250ms var(--transition-timing-function);
-  transition: background-color 250ms var(--transition-timing-function), color 250ms var(--transition-timing-function), box-shadow 250ms var(--transition-timing-function), -webkit-box-shadow 250ms var(--transition-timing-function);
+  -webkit-transition-property: background-color, color, -webkit-box-shadow;
+  transition-property: background-color, color, -webkit-box-shadow;
+  transition-property: background-color, box-shadow, color;
+  transition-property: background-color, box-shadow, color, -webkit-box-shadow;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: var(--transition-timing-function);
+          transition-timing-function: var(--transition-timing-function);
 }
 .filter__btn:hover, .filter__btn:focus {
   background-color: var(--accent-color);
@@ -1215,10 +1227,14 @@ address {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
-  -webkit-transition: -webkit-box-shadow 250ms var(--transition-timing-function);
-  transition: -webkit-box-shadow 250ms var(--transition-timing-function);
-  transition: box-shadow 250ms var(--transition-timing-function);
-  transition: box-shadow 250ms var(--transition-timing-function), -webkit-box-shadow 250ms var(--transition-timing-function);
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: var(--transition-timing-function);
+          transition-timing-function: var(--transition-timing-function);
 }
 .project__link:hover, .project__link:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -1790,8 +1806,10 @@ address {
   outline-color: var(--primary-text-color);
   border-radius: 2px;
   margin-right: 7px;
-  -webkit-transition-property: background-color box-shadow outline-color;
-  transition-property: background-color box-shadow outline-color;
+  -webkit-transition-property: background-color, outline-color, -webkit-box-shadow;
+  transition-property: background-color, outline-color, -webkit-box-shadow;
+  transition-property: background-color, box-shadow, outline-color;
+  transition-property: background-color, box-shadow, outline-color, -webkit-box-shadow;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: var(--transition-timing-function);

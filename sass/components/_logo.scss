@@ -24,7 +24,7 @@
     opacity: 1;
     pointer-events: initial;
     transform: translateX(0);
-    @include transition($property: transform opacity);
+    @include transition((opacity, transform));
    
   }
 }
@@ -34,7 +34,7 @@
     opacity: 0;
     pointer-events: none;
     transform: translateX(100%);
-  @include transition($property: transform opacity);
+  @include transition((opacity, transform));
   }
 }
 

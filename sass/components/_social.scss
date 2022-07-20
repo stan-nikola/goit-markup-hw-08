@@ -46,7 +46,7 @@
   width: 44px;
   height: 44px;
   border-radius: 50px;
-  @include transition ($property: background-color color);
+  @include transition ((background-color, color));
 
 }
 

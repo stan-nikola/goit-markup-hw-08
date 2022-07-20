@@ -54,9 +54,8 @@
     line-height: 1.62;
     letter-spacing: 0.03em;
     padding: 6px 22px;
-    transition: background-color 250ms var(--transition-timing-function),
-        color 250ms var(--transition-timing-function),
-        box-shadow 250ms var(--transition-timing-function);
+    @include transition ((background-color, box-shadow ,color));
+
 
     &:hover,
     &:focus {
@@ -66,11 +65,12 @@
             0px 2px 2px rgba(0, 0, 0, 0.12);
     }
 }
-.filter__btn--active{
+
+.filter__btn--active {
     background-color: var(--accent-color);
-        color: var(--second-text-color);
-        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-            0px 2px 2px rgba(0, 0, 0, 0.12);
+    color: var(--second-text-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* Projects */
@@ -94,9 +94,10 @@
 
     @media screen and (min-width:$tablet) and (max-width: 1199px) {
         width: calc((100% - 30px)/2);
-       
+
     }
-    @media screen and (min-width: $desktop){
+
+    @media screen and (min-width: $desktop) {
         width: calc((100% - 30px*2)/3);
 
     }
@@ -107,8 +108,8 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    @include transition (box-shadow);
 
-    transition: box-shadow 250ms var(--transition-timing-function);
 
     &:hover,
     &:focus {
@@ -120,12 +121,15 @@
     position: relative;
     overflow: hidden;
 }
+
 .project__img {
     max-width: 450px;
+
     @media screen and (min-width:$tablet) and (max-width:1199px) {
         max-width: 354px;
         height: 294px;
     }
+
     @media screen and (min-width:$desktop) {
         max-width: 370px;
         height: 294px;
@@ -144,8 +148,8 @@
 
     background-color: rgba(33, 150, 243, 0.9);
     transform: translateY(101%);
-    @include transition($property: transform);
-    
+    @include transition(transform);
+
 
     .project__link:hover &,
     .project__link:focus & {
@@ -158,6 +162,7 @@
     line-height: 1.56;
     color: var(--second-text-color);
     padding: 63px 24px;
+
     @media screen and (max-width: 450px) {
         padding: 32px 24px;
         font-size: 14px;

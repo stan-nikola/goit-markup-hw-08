@@ -136,7 +136,7 @@
     border-radius: 4px;
     padding: 15px 16px;
     outline: none;
-    @include transition($property: border-color);
+    @include transition(border-color);
 
     &:hover,
     &:focus {
@@ -159,7 +159,7 @@
     .footer-subscribe__field:not(:placeholder-shown)+& {
         opacity: 0;
     }
-  @include transition($property: opacity, $duration: 150ms);
+  @include transition(opacity, $duration: 150ms);
    
 }
 
@@ -175,7 +175,7 @@
     font-weight: 700;
     line-height: 1.88;
     letter-spacing: 0.06em;
-    @include transition($property: box-shadow);
+    @include transition(box-shadow);
 
 
     &:hover,
