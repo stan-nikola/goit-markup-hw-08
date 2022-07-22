@@ -100,7 +100,7 @@ p {
 
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -1246,9 +1246,6 @@ address {
   overflow: hidden;
 }
 
-.project__img {
-  max-width: 450px;
-}
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .project__img {
     max-width: 354px;
