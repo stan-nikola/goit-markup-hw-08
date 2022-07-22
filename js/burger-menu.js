@@ -3,7 +3,7 @@
   const menuBtnRef = document.querySelector("[data-menu-button]");
   const mobileMenuRef = document.querySelector("[data-menu]");
   const mobileLogoRef = document.querySelector("[data-logo]");
-  const mobileBodyRef = document.querySelector("[data-body-burger]");
+  const mobileBodyRef = document.querySelector("[data-body]");
 
   menuBtnRef.addEventListener("click", () => {
     const expanded =
@@ -14,12 +14,12 @@
 
     mobileMenuRef.classList.toggle("is-open");
     mobileLogoRef.classList.toggle("logo--hidden");
-    mobileBodyRef.classList.toggle("no-scroll--burger");
+    mobileBodyRef.classList.toggle("no-scroll");
 
     window.matchMedia('(min-width: 768px)').addEventListener('change', (e) => {
       if (!e.matches) return;
       mobileMenuRef.classList.remove("is-open");
-      mobileBodyRef.classList.remove("no-scroll--burger");
+      mobileBodyRef.classList.remove("no-scroll");
       mobileLogoRef.classList.remove("logo--hidden");
       menuBtnRef.classList.remove("is-open");
 

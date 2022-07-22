@@ -121,24 +121,24 @@ address {
   overflow: hidden;
 }
 
-.footer__item, .contanier, .container, .header__item {
+.footer__item, .container, .header__item {
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
 @media screen and (min-width: 480px) {
-  .footer__item, .contanier, .container, .header__item {
+  .footer__item, .container, .header__item {
     max-width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
-  .footer__item, .contanier, .container, .header__item {
+  .footer__item, .container, .header__item {
     max-width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .footer__item, .contanier, .container, .header__item {
+  .footer__item, .container, .header__item {
     max-width: 1200px;
   }
 }
