@@ -3,7 +3,7 @@
   const menuBtnRef = document.querySelector("[data-menu-button]");
   const mobileMenuRef = document.querySelector("[data-menu]");
   const mobileLogoRef = document.querySelector("[data-logo]");
-  const mobileBodyRef = document.querySelector("[data-body-burger]");
+  const mobileBodyRef = document.querySelector("[data-body]");
 
   menuBtnRef.addEventListener("click", () => {
     const expanded =
