@@ -1584,10 +1584,11 @@ address {
     overflow-y: scroll;
   }
 }
-@media screen and (max-width: 1199px) and (max-width: 479px) {
+@media screen and (max-width: 479px) {
   .modal {
     top: 83px;
     padding: 30px;
+    padding-top: 40px;
     width: calc(100% - 30px);
   }
 }
@@ -1693,7 +1694,7 @@ address {
   position: relative;
 }
 
-.label__imput {
+.label__input {
   width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -1707,7 +1708,7 @@ address {
   -webkit-transition-timing-function: var(--transition-timing-function);
           transition-timing-function: var(--transition-timing-function);
 }
-.label__thumb:hover .label__imput, .label__thumb:focus-within .label__imput {
+.label__thumb:hover .label__input, .label__thumb:focus-within .label__input {
   border-color: var(--accent-color);
 }
 
@@ -1730,20 +1731,20 @@ address {
   fill: var(--accent-color);
 }
 
-.label__imput--textarea {
+.label__input--textarea {
   height: 120px;
   padding: 12px 16px;
   resize: none;
 }
 @media screen and (max-width: 479px) {
-  .label__imput--textarea {
+  .label__input--textarea {
     height: 100px;
   }
 }
 
 .label__placeholder {
   position: absolute;
-  top: 13px;
+  top: 14px;
   left: 16px;
   line-height: 1.14;
   letter-spacing: 0.01em;
@@ -1755,13 +1756,13 @@ address {
   -webkit-transition-timing-function: var(--transition-timing-function);
           transition-timing-function: var(--transition-timing-function);
 }
-.label__imput--textarea:not(:-moz-placeholder-shown) + .label__placeholder {
+.label__input--textarea:not(:-moz-placeholder-shown) + .label__placeholder {
   opacity: 0;
 }
-.label__imput--textarea:not(:-ms-input-placeholder) + .label__placeholder {
+.label__input--textarea:not(:-ms-input-placeholder) + .label__placeholder {
   opacity: 0;
 }
-.label__imput--textarea:focus .label__placeholder, .label__imput--textarea:not(:placeholder-shown) + .label__placeholder {
+.label__input--textarea:focus .label__placeholder, .label__input--textarea:not(:placeholder-shown) + .label__placeholder {
   opacity: 0;
 }
 
@@ -1865,7 +1866,6 @@ address {
   line-height: 1.88;
   letter-spacing: 0.06em;
   color: var(--second-text-color);
-  padding: 10px 56px;
   margin: 0 auto;
   -webkit-transition-property: -webkit-box-shadow;
   transition-property: -webkit-box-shadow;
