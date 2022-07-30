@@ -1474,28 +1474,34 @@ address {
 
 .footer-subscribe__placeholder {
   position: absolute;
-  top: 50%;
-  left: 16px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(17px, 16px);
+          transform: translate(17px, 16px);
   font-size: 16px;
   line-height: 1.25;
   color: var(--footer-text-color);
-  -webkit-transition-property: opacity;
-  transition-property: opacity;
-  -webkit-transition-duration: 150ms;
-          transition-duration: 150ms;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
   -webkit-transition-timing-function: var(--transition-timing-function);
           transition-timing-function: var(--transition-timing-function);
 }
 .footer-subscribe__field:not(:-moz-placeholder-shown) + .footer-subscribe__placeholder {
   opacity: 0;
+  transform: translate(50px, 16px);
 }
 .footer-subscribe__field:not(:-ms-input-placeholder) + .footer-subscribe__placeholder {
   opacity: 0;
+  transform: translate(50px, 16px);
 }
 .footer-subscribe__form:focus + .footer-subscribe__placeholder, .footer-subscribe__field:not(:placeholder-shown) + .footer-subscribe__placeholder {
   opacity: 0;
+  -webkit-transform: translate(50px, 16px);
+          transform: translate(50px, 16px);
 }
 
 .footer-subscribe-btn {
@@ -1744,26 +1750,34 @@ address {
 
 .label__placeholder {
   position: absolute;
-  top: 14px;
-  left: 16px;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(17px, 14px);
+          transform: translate(17px, 14px);
   line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
-  -webkit-transition-property: opacity;
-  transition-property: opacity;
-  -webkit-transition-duration: 150ms;
-          transition-duration: 150ms;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
   -webkit-transition-timing-function: var(--transition-timing-function);
           transition-timing-function: var(--transition-timing-function);
 }
 .label__input--textarea:not(:-moz-placeholder-shown) + .label__placeholder {
   opacity: 0;
+  transform: translate(50px, 14px);
 }
 .label__input--textarea:not(:-ms-input-placeholder) + .label__placeholder {
   opacity: 0;
+  transform: translate(50px, 14px);
 }
 .label__input--textarea:focus .label__placeholder, .label__input--textarea:not(:placeholder-shown) + .label__placeholder {
   opacity: 0;
+  -webkit-transform: translate(50px, 14px);
+          transform: translate(50px, 14px);
 }
 
 .checkbox {

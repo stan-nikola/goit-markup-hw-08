@@ -148,9 +148,9 @@
 
 .label__placeholder {
     position: absolute;
-    top: 14px;
-    left: 16px;
-
+    top: 0;
+    left: 0;
+transform: translate(17px, 14px);
     line-height: 1.14;
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
@@ -158,8 +158,9 @@
     .label__input--textarea:focus &,
     .label__input--textarea:not(:placeholder-shown)+& {
         opacity: 0;
+        transform: translate(50px, 14px);
     }
- @include transition(opacity, $duration: 150ms);
+ @include transition((opacity, transform), $duration: 200ms);
    
 }
 

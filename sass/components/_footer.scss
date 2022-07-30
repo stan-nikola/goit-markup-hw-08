@@ -147,9 +147,10 @@
 
 .footer-subscribe__placeholder {
     position: absolute;
-    top: 50%;
-    left: 16px;
-    transform: translateY(-50%);
+    top: 0;
+    left: 0;
+        transform: translate(17px, 16px);
+    
 
     font-size: 16px;
     line-height: 1.25;
@@ -158,8 +159,9 @@
     .footer-subscribe__form:focus+&,
     .footer-subscribe__field:not(:placeholder-shown)+& {
         opacity: 0;
+        transform: translate(50px, 16px);
     }
-  @include transition(opacity, $duration: 150ms);
+  @include transition((opacity,transform), $duration: 250ms);
    
 }
 
