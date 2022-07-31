@@ -1587,7 +1587,6 @@ address {
 @media screen and (max-width: 1199px) {
   .modal {
     top: 93px;
-    overflow-y: scroll;
   }
 }
 @media screen and (max-width: 479px) {
