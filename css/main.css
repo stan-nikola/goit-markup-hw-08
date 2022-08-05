@@ -272,7 +272,6 @@ address {
     opacity: 1;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
-    max-width: 480px;
     overflow-y: scroll;
   }
 }

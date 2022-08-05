@@ -46,7 +46,6 @@ width: 100%;
         &.is-open {
             opacity: 1;
             transform: translateX(-50%);
-            max-width: 480px;
             overflow-y: scroll;
         }
     }
